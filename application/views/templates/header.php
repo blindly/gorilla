@@ -4,6 +4,9 @@
         
         <!-- CSS -->
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Custom styles for this template -->
+        <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
     </head>
     <body>
 
