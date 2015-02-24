@@ -7,7 +7,7 @@ class User extends CI_Controller {
 	{
         $this->load->helper('uuid_helper');
         $gorillaUuid = $this->input->cookie('gorilla_uuid');
-        if ( ! g$orillaId )
+        if ( ! $gorillaUuid )
         {
             $gorillaUuid = uuid_generator();
             $cookie = array(
@@ -23,6 +23,6 @@ class User extends CI_Controller {
             $this->input->set_cookie($cookie);
         }
         
-        echo $gorillaUuid;
+        echo $gorillaUuid ;
 	}
 }
