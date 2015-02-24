@@ -23,6 +23,13 @@ class User extends CI_Controller {
             $this->input->set_cookie($cookie);
         }
         
-        echo $gorillaUuid ;
+        redirect('/user/uuid/'. $gorillaUuid);
 	}
+    
+    public function uuid($gorillaUuid = null)
+    {
+        echo "<h1>Hi</h1>";
+        echo $gorillaUuid;
+    }
+    
 }
