@@ -6,6 +6,5 @@ $( "#addition" ).click(function() {
         category: $('#category').val(), 
         merchant: $('#merchant').val(), 
         location: $('#location').val(), 
-    } 
-    );
+    });
 });
