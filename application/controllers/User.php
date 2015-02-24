@@ -4,11 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class User extends CI_Controller {
 
 	public function index()
-	{        
+	{
+        $this->load->helper('uuid_helper');
         $gorillaUuid = $this->input->cookie('gorillaUuid');
         if ( ! $gorillaUuid )
         {
-            $gorillaUuid = com_create_guid();
+            $gorillaUuid = uuid_generator();
             $cookie = array(
                     'name'   => 'gorillaUuid',
                     'value'  => $gorillaUuid,
