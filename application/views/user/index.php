@@ -1,0 +1,1 @@
+<h2>Hi <?php echo gorillaUuid ?></h2>
