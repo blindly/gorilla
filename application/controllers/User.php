@@ -42,4 +42,19 @@ class User extends CI_Controller {
         $this->load->view('templates/footer', $data);
     }
     
+    public function addExpense()
+    {
+        $this->load->database();
+
+        $data = array(
+            'description'   => $_POST['description'],
+            'amount'        => $_POST['amount'],
+            'merchant'      => $_POST['merchant'],
+            'location'      => $_POST['location'],
+            'date'          => $_POST['date'],
+        );
+
+        $this->db->insert('expenses', $data);
+    }
+    
 }

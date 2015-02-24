@@ -1,104 +1,73 @@
 <div class="container">
-    <div class="col-xs-12 col-sm-6 col-lg-8">
+    <div class="col-xs-6 col-lg-4">
         <form class="form-horizontal">
-        <fieldset>
+            <fieldset>
 
-        <!-- Form Name -->
-        <legend>Expenses</legend>
+                <!-- Form Name -->
+                <legend>Expenses</legend>
 
-        <!-- Text input-->
-        <div class="control-group">
-          <label class="control-label" for="name">Name</label>
-          <div class="controls">
-            <input id="name" name="name" type="text" placeholder="" class="input-medium">
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="description">Description</label>
+                  <div class="controls">
+                    <input id="description" name="description" type="text" placeholder="" class="input-medium">
 
-          </div>
-        </div>
+                  </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="control-group">
-          <label class="control-label" for="description">Description</label>
-          <div class="controls">
-            <input id="description" name="description" type="text" placeholder="" class="input-medium">
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="amount">Amount</label>
+                  <div class="controls">
+                    <input id="amount" name="amount" type="text" placeholder="" class="input-medium">
 
-          </div>
-        </div>
+                  </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="control-group">
-          <label class="control-label" for="amount">Amount</label>
-          <div class="controls">
-            <input id="amount" name="amount" type="text" placeholder="" class="input-medium">
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="category">Category</label>
+                  <div class="controls">
+                    <input id="category" name="category" type="text" placeholder="" class="input-medium">
 
-          </div>
-        </div>
+                  </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="control-group">
-          <label class="control-label" for="category">Category</label>
-          <div class="controls">
-            <input id="category" name="category" type="text" placeholder="" class="input-medium">
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="merchant">Merchant</label>
+                  <div class="controls">
+                    <input id="merchant" name="merchant" type="text" placeholder="" class="input-medium">
 
-          </div>
-        </div>
+                  </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="control-group">
-          <label class="control-label" for="merchant">Merchant</label>
-          <div class="controls">
-            <input id="merchant" name="merchant" type="text" placeholder="" class="input-medium">
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="location">Location</label>
+                  <div class="controls">
+                    <input id="location" name="location" type="text" placeholder="" class="input-medium">
 
-          </div>
-        </div>
+                  </div>
+                </div>
 
-        <!-- Text input-->
-        <div class="control-group">
-          <label class="control-label" for="location">Location</label>
-          <div class="controls">
-            <input id="location" name="location" type="text" placeholder="" class="input-medium">
+                <!-- Button -->
+                <div class="control-group">
+                  <label class="control-label" for="addition"></label>
+                  <div class="controls">
+                    <button id="addition" name="addition" class="btn btn-primary">Add Expense</button>
+                  </div>
+                </div>
 
-          </div>
-        </div>
-
-        <!-- Button -->
-        <div class="control-group">
-          <label class="control-label" for="addition"></label>
-          <div class="controls">
-            <button id="addition" name="addition" class="btn btn-primary">Add Expense</button>
-          </div>
-        </div>
-
-        </fieldset>
+            </fieldset>
         </form>
     </div>
     
-    <div class="col-xs-6 col-lg-4">
+    <div class="col-xs-12 col-sm-6 col-lg-8">
         <div class="well">
             <table>
                 <tr>
-                    <td>Gas</td>
-                    <td>$100</td>
-                    <td>Lillington</td>
-                </tr>
-                <tr>
-                    <td>Gas</td>
-                    <td>$100</td>
-                    <td>Lillington</td>
-                </tr>
-                <tr>
-                    <td>Gas</td>
-                    <td>$100</td>
-                    <td>Lillington</td>
-                </tr>
-                <tr>
-                    <td>Gas</td>
-                    <td>$100</td>
-                    <td>Lillington</td>
-                </tr>
-                <tr>
-                    <td>Gas</td>
-                    <td>$100</td>
-                    <td>Lillington</td>
+                    <th></th>
                 </tr>
             </table>
         </div>
