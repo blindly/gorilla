@@ -1,0 +1,72 @@
+    <div class="container">
+    <form class="form-horizontal">
+    <fieldset>
+
+    <!-- Form Name -->
+    <legend>Expenses</legend>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="name">Name</label>
+      <div class="controls">
+        <input id="name" name="name" type="text" placeholder="" class="input-medium">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="description">Description</label>
+      <div class="controls">
+        <input id="description" name="description" type="text" placeholder="" class="input-medium">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="amount">Amount</label>
+      <div class="controls">
+        <input id="amount" name="amount" type="text" placeholder="" class="input-medium">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="category">Category</label>
+      <div class="controls">
+        <input id="category" name="category" type="text" placeholder="" class="input-medium">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="merchant">Merchant</label>
+      <div class="controls">
+        <input id="merchant" name="merchant" type="text" placeholder="" class="input-medium">
+
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="location">Location</label>
+      <div class="controls">
+        <input id="location" name="location" type="text" placeholder="" class="input-medium">
+
+      </div>
+    </div>
+
+    <!-- Button -->
+    <div class="control-group">
+      <label class="control-label" for="addition"></label>
+      <div class="controls">
+        <button id="addition" name="addition" class="btn btn-primary">Add Expense</button>
+      </div>
+    </div>
+
+    </fieldset>
+    </form>
+</div>
