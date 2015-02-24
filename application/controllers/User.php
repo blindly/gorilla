@@ -5,7 +5,11 @@ class User extends CI_Controller {
 
 	public function index()
 	{
+        // Load Helpers
+        $this->load->helper('url');
         $this->load->helper('uuid_helper');
+        
+        // Load UUID from Cookie if user has been here before
         $gorillaUuid = $this->input->cookie('gorilla_uuid');
         if ( ! $gorillaUuid )
         {
@@ -23,6 +27,7 @@ class User extends CI_Controller {
             $this->input->set_cookie($cookie);
         }
         
+        // Send user to their page
         redirect('/user/uuid/'. $gorillaUuid);
 	}
     
