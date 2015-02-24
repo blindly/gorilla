@@ -19,7 +19,7 @@ $( "#addition" ).click(function() {
     
     $.ajax({
         type: "POST",
-        url: "https://gorilla.borke.us/index.php/user/expenses",
+        url: "https://gorilla.borke.us/index.php/user/addExpenses",
         data: myExpenses.join('&'),
         success: function()
         {
