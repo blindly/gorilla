@@ -40,10 +40,12 @@ class User extends CI_Controller {
     
     public function uuid($gorillaUuid = null)
     {
+        /*
         if ($gorillaUuid)
         {
             $this->session->gorillaUuid = $gorillaUuid;
         }
+        */
         
         $data = array(
             'gorillaUuid' => $this->session->gorillaUuid,
