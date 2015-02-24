@@ -1,5 +1,5 @@
 <div class="container">
-    <div class=".col-xs-12 .col-sm-6 .col-lg-8">
+    <div class="col-xs-12 col-sm-6 col-lg-8">
         <form class="form-horizontal">
         <fieldset>
 
@@ -72,7 +72,7 @@
         </form>
     </div>
     
-    <div class=".col-xs-6 .col-lg-4">
+    <div class="col-xs-6 col-lg-4">
         <div class="well">
             <table>
                 <tr>
