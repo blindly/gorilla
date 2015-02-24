@@ -58,6 +58,7 @@ class User extends CI_Controller {
     
     public function addExpenses()
     {
+        /*
         $this->load->database();
 
         $data = array(
@@ -70,6 +71,10 @@ class User extends CI_Controller {
         );
 
         $this->db->insert('expenses', $data);
+        */
+        
+        echo "<pre>";
+        print_r($this->session);
     }
     
 }

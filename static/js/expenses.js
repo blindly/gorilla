@@ -18,7 +18,7 @@ $( "#addition" ).click(function() {
     var myExpenses = new Array(description, location, category, merchant, location);
     
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "https://gorilla.borke.us/index.php/user/addExpenses",
         data: myExpenses.join('&'),
         success: function()
@@ -30,4 +30,23 @@ $( "#addition" ).click(function() {
           console.log("AJAX request was a failure");
         }
     });
+    
+/*
+         $.ajax(
+        {
+            url: "send_sms.php",
+            type: "GET",
+            data: "from=6504378632&body="+smsMessage+"&to="+smsTo, //The data your sending to some-page.php
+
+        success: function()
+        {
+          console.log("AJAX request was successfull");
+        },
+          error:function()
+        {
+          console.log("AJAX request was a failure");
+        }
+    });
+*/
+    
 });
