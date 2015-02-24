@@ -48,7 +48,7 @@ class User extends CI_Controller {
         */
         
         $data = array(
-            'gorillaUuid' => $this->session->gorillaUuid,
+            'gorillaUuid' => $gorillaUuid,
         );
         
         $this->load->view('templates/header', $data);
