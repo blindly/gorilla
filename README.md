@@ -16,3 +16,4 @@ PHP based finance tracker
   - Date / Time
   - Tax Deductable
     - Group
+- Gorilla will have a reports section
