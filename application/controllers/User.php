@@ -33,8 +33,8 @@ class User extends CI_Controller {
     
     public function uuid($gorillaUuid = null)
     {
-        echo "<h1>Hi</h1>";
-        echo $gorillaUuid;
+        $data = array();
+        $this->load->view('templates/header', $data);
     }
     
 }
