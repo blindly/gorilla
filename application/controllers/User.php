@@ -6,17 +6,17 @@ class User extends CI_Controller {
 	public function index()
 	{
         $this->load->helper('uuid_helper');
-        $gorillaUuid = $this->input->cookie('gorillaUuid');
-        if ( ! $gorillaUuid )
+        $gorillaUuid = $this->input->cookie('gorilla_uuid');
+        if ( ! g$orillaId )
         {
             $gorillaUuid = uuid_generator();
             $cookie = array(
-                    'name'   => 'gorillaUuid',
+                    'name'   => 'uuid',
                     'value'  => $gorillaUuid,
                     'expire' => '86500',
                     'domain' => 'gorilla.borke.us',
                     'path'   => '/',
-                    'prefix' => 'myprefix_',
+                    'prefix' => 'gorilla_',
                     'secure' => TRUE
             );
 
