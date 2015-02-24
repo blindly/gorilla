@@ -33,8 +33,13 @@ class User extends CI_Controller {
     
     public function uuid($gorillaUuid = null)
     {
-        $data = array();
+        $data = array(
+            'gorillaUuid' => $gorillaUuid,
+        );
+        
         $this->load->view('templates/header', $data);
+        $this->load->view('user/index', $data);
+        $this->load->view('templates/footer', $data);
     }
     
 }
