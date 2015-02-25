@@ -101,9 +101,8 @@
         
         <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading"><h2 class="text-center">Current Expenses</h2></div>
-            <div class="panel-body">
-            </div>
+            <div class="panel-heading"><h3 class="text-center">Current Expenses</h3></div>
+            <div class="panel-body"></div>
             <div id="expenseListing"></div>
         </div>
     </div>
