@@ -3,7 +3,7 @@
         <div id="debug" class="well text-center">
             <p>Debug</p>
             <p>
-                User: User <?= $username ?><br>
+                User: <?= $username ?><br>
                 Uuid: <?= $gorillaUuid ?><br>
             </p>
         </div>
