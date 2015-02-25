@@ -27,8 +27,9 @@ class Expenses extends CI_Controller {
         }
         
         $data = array(
-            'gorillaUuid' => $this->session->gorillaUuid,
-            'controller'  => $this->uri->segment(1)
+            'gorillaUuid'   => $this->session->gorillaUuid,
+            'username'      => $this->session->username,
+            'controller'    => $this->uri->segment(1)
         );
         
         $this->load->view('templates/header', $data);
