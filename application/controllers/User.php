@@ -14,7 +14,7 @@ class User extends CI_Controller {
         $this->load->helper('cookie');
         
         // Load Models
-        $this->load->model('user');
+        $this->load->model('User_model');
     }
     
     public function index()
@@ -29,9 +29,9 @@ class User extends CI_Controller {
             'uuid'          => $this->session->gorillaUuid
         );
         
-        if ( ! $this->User->check( $params ) )
+        if ( ! $this->User_model->check( $params ) )
         {
-            $this->User->register( $params );
+            $this->User_model->register( $params );
         }
         
         $cookie = array(
@@ -58,7 +58,7 @@ class User extends CI_Controller {
             'uuid'          => $gorillaUuid
         );
         
-        if ( ! $this->User->check( $params ) )
+        if ( ! $this->User_model->check( $params ) )
         {
             redirect('/user');
         }
