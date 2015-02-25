@@ -55,20 +55,9 @@
                 <div class="control-group">
                   <label class="control-label" for="location">Date / Time</label>
                   <div class="controls">
-                    <input id="date" name="date" type="text" placeholder="" class="input-medium">
-
+                    <input id="date" name="date" type="text" placeholder="" class="input-medium form_datetime" readonly>
                   </div>
                 </div>
-                
-                <!-- Date Picker -->
-                <script type="text/javascript">
-                        $(function(){
-                            $('*[name=date]').appendDtpicker({
-                                "inline": true,
-                                "dateFormat": "DD.MM.YY H:mmTT"
-                            });
-                        });
-                </script>
 
                 <!-- Button -->
                 <div class="control-group">
