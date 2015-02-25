@@ -135,6 +135,8 @@ class User extends CI_Controller {
         // Get all Categories
         $this->db->distinct();
         $this->db->select('category');
+        $this->db->where('uuid', $this->session->gorillaUuid);
+    
         $categories = $this->db->get('expenses');
         
         echo "<pre>";
