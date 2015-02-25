@@ -24,7 +24,8 @@ class User extends CI_Controller {
             $cookie = array(
                     'name'   => 'uuid',
                     'value'  => $this->session->gorillaUuid,
-                    'expire' => '86500',
+                    //'expire' => '86500',
+                    'expire' => '15570000',
                     'domain' => 'gorilla.borke.us',
                     'path'   => '/',
                     'prefix' => 'gorilla_',
