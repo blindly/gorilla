@@ -32,7 +32,7 @@ class Mileage extends CI_Controller {
         );
         
         $this->load->view('templates/header', $data);
-        $this->load->view('car/index', $data);
+        $this->load->view('mileage/index', $data);
         $this->load->view('templates/footer', $data);
     }
     
@@ -66,7 +66,7 @@ class Mileage extends CI_Controller {
         
         //if ( $valid )
         
-            echo $this->Car_model->add($data);
+            echo $this->Mileage_model->add($data);
         //else
             //echo "error";
     }
