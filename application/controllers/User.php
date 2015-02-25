@@ -146,6 +146,7 @@ class User extends CI_Controller {
                 $expenses = $this->db->get('expenses');
 
                 $data = array(
+                    'category' => $result->category,
                     'expenses_listings' => $expenses->result_array()
                 );
 
