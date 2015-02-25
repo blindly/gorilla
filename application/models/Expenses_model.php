@@ -13,6 +13,7 @@ class Expenses_model extends CI_Model {
     
     public function add($params = array())
     {
+        $params['amount'] = str_replace('$','', $params['amount']);
         $this->db->insert('expenses', $params);
         
         if ( $this->db->affected_rows() > 0 ) 
