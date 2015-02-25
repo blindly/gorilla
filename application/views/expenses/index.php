@@ -86,7 +86,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="addition"></label>
           <div class="col-md-8">
-            <button id="addition" name="addition" class="btn btn-success">Add Expense</button>
+            <button id="addition" name="addition" class="btn btn-success">Add</button>
             <button id="reset" name="reset" class="btn btn-danger" type="reset">Clear</button>
             
           </div>
