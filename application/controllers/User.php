@@ -56,9 +56,12 @@ class User extends CI_Controller {
     
     public function me()
     {
-        if ($gorillaUuid)
+        // Load Helpers
+        $this->load->helper('url');
+        
+        if ( ! $this->session->gorillaUuid)
         {
-            $this->session->gorillaUuid = $gorillaUuid;
+            redirect('/user');
         }
         
         $data = array(
