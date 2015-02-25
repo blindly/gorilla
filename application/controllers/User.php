@@ -140,16 +140,12 @@ class User extends CI_Controller {
         }
         else
         {
-            // Get All Expenses
-            $this->db->where('uuid', $this->session->gorillaUuid);
-            $expenses = $this->db->get('expenses');
-
             $data = array(
                 'gorillaUuid'   => $this->session->gorillaUuid,
-                'expenses'      => $expenses,
+                'message'      => "No expenses listed. You should add some!",
             );
 
-            $this->load->view('user/expenses', $data);
+            $this->load->view('user/message', $data);
         }
     }
     
