@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-xs-6 col-lg-4" id="left-side">
         
-        <div class="alert alert-warning alert-dismissible" role="alert" style="display: none">
+        <div id="messagebox" class="alert alert-warning alert-dismissible" role="alert" style="display: none">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         
