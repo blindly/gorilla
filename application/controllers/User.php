@@ -149,7 +149,7 @@ class User extends CI_Controller {
                     'expenses_listings' => $expenses->result_array()
                 );
 
-                $this->parser->parse_string('user/expenses_parser', $data);
+                $this->parser->parse('user/expenses_parser', $data);
             }
         }
         else
