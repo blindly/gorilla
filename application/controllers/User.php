@@ -152,9 +152,9 @@ class User extends CI_Controller {
                 $expenses = $this->db->get('expenses');
                 
                 $total = 0;
-                foreach ($expenses->result_array() as $expenses)
+                foreach ($expenses->result_array() as $expense)
                 {
-                    $total = $total + $expenses->amount;
+                    $total = $total + $expense->amount;
                 }
 
                 $data = array(
