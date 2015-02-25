@@ -10,7 +10,7 @@
         <script src="/static/js/expenses.js"></script>
 
         <!--Load Script and Stylesheet datePicker -->
-        <script type="text/javascript" src="/static/js/jquery.simple-dtpicker.js"></script>
-        <link type="text/css" href="/static/css/jquery.simple-dtpicker.css" rel="stylesheet" />
+        <script type="text/javascript" src="/static/external/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+        <link type="text/css" href="/static/external/bootstrap-datetimepicker/bootstrap-datetimepicker.css" rel="stylesheet" />
     </body>
 <html>
