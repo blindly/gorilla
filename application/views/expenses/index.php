@@ -39,6 +39,7 @@
         </div>
                 
         <!-- Text input-->
+        <!--
         <div class="form-group">
           <label class="col-md-4 control-label" for="location">City</label>  
           <div class="col-md-6">
@@ -46,6 +47,7 @@
 
           </div>
         </div>
+        -->
                 
         <!-- Text input-->
         <div class="form-group">
