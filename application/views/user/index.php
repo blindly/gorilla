@@ -56,7 +56,7 @@
                 <div class="control-group">
                   <label class="control-label" for="description">Description</label>
                   <div class="controls">
-                    <input id="description" name="description" type="text" placeholder="Any additional details?" class="input-xlarge">
+                    <input id="description" name="description" type="text" placeholder="Any additional details?" class="input-large">
 
                   </div>
                 </div>
