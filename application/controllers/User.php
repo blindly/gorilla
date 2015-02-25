@@ -64,13 +64,26 @@ class User extends CI_Controller {
             'amount'        => $_POST['amount'],
             'merchant'      => $_POST['merchant'],
             'location'      => $_POST['location'],
-            //'date'          => $_POST['date'],
+            //'date'        => $_POST['date'],
         );
 
         $this->db->insert('expenses', $data);
         
-        echo "<pre>";
-        print_r($_SESSION);
+        echo "done";
+    }
+    
+    public function listExpenses()
+    {
+        $this->load->database();
+        
+        $this->db->where('uuid', $this->session->gorillaUuid);
+        $expenses = $this->db->get('expenses');
+        
+        foreach ($expense as $expenses)
+        {
+            echo $expense->name;
+            echo $expense->amount;
+        }
     }
     
 }
