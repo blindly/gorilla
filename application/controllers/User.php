@@ -80,9 +80,9 @@ class User extends CI_Controller {
         $this->input->set_cookie($cookie);
         
         // Send user to their page
-        redirect('/expenses');
+        //redirect('/expenses');
         
-        /*
+        
         $data = array(
             'gorillaUuid' => $gorillaUuid,
         );
@@ -90,7 +90,7 @@ class User extends CI_Controller {
         $this->load->view('templates/header', $data);
         $this->load->view('expenses/index', $data);
         $this->load->view('templates/footer', $data);
-        */
+        
     }
     
 }
