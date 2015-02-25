@@ -37,6 +37,8 @@ $( document ).ready( function() {
             console.log("Hooray, it worked!");
             $('#messagebox').append('<p>Expense added</p>');
             $('#messagebox').css('display','block');
+            
+            $('#messagebox').hide( "drop", { direction: "down" }, "slow" );
         });
 
         // Callback handler that will be called on failure
