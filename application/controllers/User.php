@@ -90,7 +90,10 @@ class User extends CI_Controller {
 
         $this->db->insert('expenses', $data);
         
-        echo "done";
+        if ( $this->db->affected_rows() > 0 ) 
+            echo "done";
+        else
+            echo "error";
     }
     
     public function listExpenses()
