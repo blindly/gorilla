@@ -28,7 +28,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="merchant">Merchant</label>  
           <div class="col-md-6">
-          <input id="merchant" name="merchant" type="text" placeholder="Where did you get it?" class="form-control input-md" required="">
+          <input id="merchant" name="merchant" type="text" placeholder="From where?" class="form-control input-md" required="">
 
           </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="location">Location</label>  
           <div class="col-md-6">
-          <input id="location" name="location" type="text" placeholder="What regional area?" class="form-control input-md" required="">
+          <input id="location" name="location" type="text" placeholder="What area?" class="form-control input-md" required="">
 
           </div>
         </div>

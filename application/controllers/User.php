@@ -91,43 +91,6 @@ class User extends CI_Controller {
         echo "done";
     }
     
-    public function listOldExpenses()
-    {
-        $this->load->database();
-                
-        // Get All Expenses
-        $this->db->where('uuid', $this->session->gorillaUuid);
-        $expenses = $this->db->get('expenses');
-                
-        if ($expenses->num_rows() > 0)
-        {
-
-            echo "
-                <table class='table table-striped'>
-                    <tr>
-                        <th>Amount</th>
-                        <th>Merchant</th>
-                        <th>Location</th>
-                        <th>Timestamp</th>
-                    </tr>";
-            
-            foreach ($expenses->result() as $expense)
-            {
-                echo "
-                    <tr>
-                        <td>\$$expense->amount</td>
-                        <td>$expense->merchant</td>
-                        <td>$expense->location</td>
-                        <td>$expense->timestamp</td>
-                    </tr>";
-
-            }
-        
-            echo "</table>";
-
-        }
-    }
-
     public function listExpenses()
     {
         $this->load->database();
@@ -174,7 +137,6 @@ class User extends CI_Controller {
             );
 
             $this->parser->parse('user/grand_total', $data);
-    
         }
         else
         {
