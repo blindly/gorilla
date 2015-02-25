@@ -83,7 +83,7 @@ class User extends CI_Controller {
         {
 
             echo "
-                <table>
+                <table class='table table-striped'>
                     <tr>
                         <th>Description</th>
                         <th>Amount</th>
