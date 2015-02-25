@@ -12,6 +12,10 @@
         
         <!-- Custom styles for this template -->
         <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
+        
+        <!--Load Script and Stylesheet datePicker -->
+        <script type="text/javascript" src="/static/js/jquery.simple-dtpicker.js"></script>
+        <link type="text/css" href="/static/css/jquery.simple-dtpicker.css" rel="stylesheet" />
     </head>
     <body>
 

@@ -50,6 +50,25 @@
 
                   </div>
                 </div>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="location">Date / Time</label>
+                  <div class="controls">
+                    <input id="date" name="date" type="text" placeholder="" class="input-medium">
+
+                  </div>
+                </div>
+                
+                <!-- Date Picker -->
+                <script type="text/javascript">
+                        $(function(){
+                            $('*[name=date]').appendDtpicker({
+                                "inline": true,
+                                "dateFormat": "DD.MM.YY H:mmTT"
+                            });
+                        });
+                </script>
 
                 <!-- Button -->
                 <div class="control-group">

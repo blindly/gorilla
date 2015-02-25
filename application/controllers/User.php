@@ -85,7 +85,6 @@ class User extends CI_Controller {
             echo "
                 <table class='table table-striped'>
                     <tr>
-                        <th>Description</th>
                         <th>Amount</th>
                         <th>Merchant</th>
                         <th>Location</th>
@@ -95,7 +94,6 @@ class User extends CI_Controller {
             {
                 echo "
                     <tr>
-                        <td>$expense->description</td>
                         <td>$expense->amount</td>
                         <td>$expense->merchant</td>
                         <td>$expense->location</td>
