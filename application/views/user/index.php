@@ -32,6 +32,15 @@
 
           </div>
         </div>
+                
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="location">Location</label>  
+          <div class="col-md-6">
+          <input id="location" name="location" type="text" placeholder="What regional area?" class="form-control input-md" required="">
+
+          </div>
+        </div>
 
         <!-- Text input-->
         <div class="form-group">
