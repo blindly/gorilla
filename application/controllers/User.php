@@ -133,7 +133,7 @@ class User extends CI_Controller {
             }
     
             $data = array(
-                '$grandTotal' => $grandTotal
+                'grandTotal' => $grandTotal
             );
 
             $this->parser->parse('user/grand_total', $data);
