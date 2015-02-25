@@ -28,7 +28,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Gorilla App</a>
+              <!-- <a class="navbar-brand" href="#">Gorilla App</a> -->
+                <a class="navbar-brand" rel="home" href="/" title="Gorilla App">
+                        <img style="max-width:100px; margin-top: -7px;"
+                             src="/static/img/gorilla.jpg">
+                    </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
