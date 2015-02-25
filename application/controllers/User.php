@@ -74,7 +74,7 @@ class User extends CI_Controller {
         */
         
         echo "<pre>";
-        print_r($this->session);
+        print_r($_SESSION);
     }
     
 }
