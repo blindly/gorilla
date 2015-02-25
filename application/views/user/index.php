@@ -64,12 +64,6 @@
     </div>
     
     <div class="col-xs-12 col-sm-6 col-lg-8">
-        <div class="well">
-            <table>
-                <tr>
-                    <th></th>
-                </tr>
-            </table>
-        </div>
+        <div id="expenseListing"></div>
     </div>
 </div>
