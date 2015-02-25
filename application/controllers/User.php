@@ -50,17 +50,42 @@ class User extends CI_Controller {
     
     public function uuid($gorillaUuid = null)
     {
-        if ($gorillaUuid)
+        $params = array(
+            'ip_address'    => $this->input->ip_address(),
+            'uuid'          => $gorillaUuid
+        );
+        
+        if ( ! $this->User_model->check( $params ) )
         {
-            $cookie = $this->input->cookie('gorilla_uuid');
-            if ($cookie)
+            redirect('/user');
+        }
+        else
+        {
+            $cookie = ;
+            if ( $this->input->cookie('gorilla_uuid') )
             {
                 delete_cookie('gorilla_uuid');
             }
             
             $this->session->gorillaUuid = $gorillaUuid;
+
+            $cookie = array(
+                    'name'   => 'uuid',
+                    'value'  => $this->session->gorillaUuid,
+                    //'expire' => '86500', /// 24 hours
+                    'expire' => '15570000', /// 6 months
+                    'domain' => 'gorilla.borke.us',
+                    'path'   => '/',
+                    'prefix' => 'gorilla_',
+                    'secure' => TRUE
+            );
+
+            $this->input->set_cookie($cookie);
+            
+            redirect('/expenses');
         }
 
+        /*
         // Load UUID from Cookie if user has been here before
         $this->session->gorillaUuid = $this->input->cookie('gorilla_uuid');
         if ( ! $this->session->gorillaUuid )
@@ -90,6 +115,7 @@ class User extends CI_Controller {
         $this->load->view('templates/header', $data);
         $this->load->view('expenses/index', $data);
         $this->load->view('templates/footer', $data);
+        */
         
     }
     
