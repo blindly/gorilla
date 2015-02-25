@@ -148,7 +148,7 @@ class User extends CI_Controller {
                 // Get All Expenses for category
                 $this->db->where('category', $result->category);
                 $this->db->where('uuid', $this->session->gorillaUuid);
-                $this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
+                //$this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
                 $expenses = $this->db->get('expenses');
                 
                 $total = 0;
