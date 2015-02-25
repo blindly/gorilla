@@ -146,7 +146,6 @@ class User extends CI_Controller {
             foreach ($categories->result() as $result)
             {
                 // Get All Expenses for category
-                $this->db->select('sum(amount) as total, category, merchant, location, timestamp');
                 $this->db->where('category', $result->category);
                 $this->db->where('uuid', $this->session->gorillaUuid);
                 $this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
