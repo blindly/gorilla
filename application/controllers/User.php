@@ -88,6 +88,7 @@ class User extends CI_Controller {
                         <th>Amount</th>
                         <th>Merchant</th>
                         <th>Location</th>
+                        <th>Timestamp</th>
                     </tr>";
             
             foreach ($expenses->result() as $expense)
@@ -97,6 +98,7 @@ class User extends CI_Controller {
                         <td>$expense->amount</td>
                         <td>$expense->merchant</td>
                         <td>$expense->location</td>
+                        <td>$expense->timestamp</td>
                     </tr>";
 
             }
