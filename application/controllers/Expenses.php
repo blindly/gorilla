@@ -99,6 +99,7 @@ class Expenses extends CI_Controller {
                 $this->db->where('category', $category);
                 $this->db->where('uuid', $this->session->gorillaUuid);
                 //$this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
+                $this->db->order_by('datestamp', 'desc');
                 $expenses = $this->db->get('expenses');
                 
                 $total = 0;
