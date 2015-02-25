@@ -33,6 +33,10 @@ class User extends CI_Controller {
             'username'      => $this->session->username
         );
         
+        echo "<pre>";
+        print_r($params);
+        exit;
+        
         if ( ! $this->User_model->checkUuid( $params ) )
         {
             $this->User_model->register( $params );
