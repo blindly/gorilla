@@ -107,7 +107,7 @@ class Mileage extends CI_Controller {
                 'grandTotal' => number_format((float)$grandTotal, 2, '.', ''),
             );
 
-            $this->parser->parse('fragment/grand_total', $data);
+            $this->parser->parse('templates/grand_total', $data);
         }
         else
         {
@@ -116,7 +116,7 @@ class Mileage extends CI_Controller {
                 'message'      => "No mileage logs entered. You should add some!",
             );
 
-            $this->load->view('fragments/message', $data);
+            $this->load->view('templates/message', $data);
         }
     }
     
