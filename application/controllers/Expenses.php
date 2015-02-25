@@ -14,6 +14,9 @@ class Expenses extends CI_Controller {
         
         // Load Database
         $this->load->database();
+        
+        // Load Models
+        $this->load->model('Expenses_model');
     }
     
     public function index()
@@ -33,9 +36,7 @@ class Expenses extends CI_Controller {
     }
     
     public function add()
-    {
-        $this->load->model('expenses_model');
-        
+    {   
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
             'amount'        => number_format((float)$this->input->post('amount'), 2, '.', ''),
