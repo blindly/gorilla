@@ -1,1 +1,1 @@
-<p class="well text-center"><?= $message ?></p>
+<p class="text-center"><?= $message ?></p>
