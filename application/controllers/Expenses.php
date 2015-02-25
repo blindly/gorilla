@@ -52,21 +52,7 @@ class Expenses extends CI_Controller {
             'deductable'    => $this->input->post('deductable'),
         );
         
-        /*
-        foreach ($requiredFields as $field)
-        {
-            if ( ! array_key_exists($field, $requiredFields) )
-            {
-                $valid = false;
-                break;
-            }
-        }
-        */
-        
-        //if ( $valid )
-            echo $this->Expenses_model->add($data);
-        //else
-            //echo "error";
+        echo $this->Expenses_model->add($data);
     }
     
     public function listing()
@@ -133,7 +119,7 @@ class Expenses extends CI_Controller {
                 'message'      => "No expenses listed. You should add some!",
             );
 
-            $this->load->view('expenses/message', $data);
+            $this->load->view('templates/message', $data);
         }
     }
     
