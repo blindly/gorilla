@@ -38,7 +38,7 @@ $( document ).ready( function() {
             
             $('#successbox').html('<p>Expense added successfully :)</p>');
             $('#successbox').css('display','block');
-            $('#successbox').hide( "drop", { direction: "down" }, "slow" );
+            $('#successbox').delay( 2000 ).hide( "drop", { direction: "right" }, "fast" );
         });
 
         // Callback handler that will be called on failure
@@ -51,7 +51,7 @@ $( document ).ready( function() {
             
             $('#failbox').html('<p>Error adding expenses :(</p>');
             $('#failbox').css('display','block');
-            $('#failbox').hide( "drop", { direction: "down" }, "slow" );
+            $('#failbox').delay( 2000 ).hide( "drop", { direction: "right" }, "fast" );
             
         });
 
