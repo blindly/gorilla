@@ -107,6 +107,10 @@ class User extends CI_Controller {
         {
             $grandTotal = 0;
             
+            echo "<pre>";
+            print_r( $categories->result() );
+            echo "</pre>";
+            
             foreach ($categories->result() as $result)
             {
                 // Get All Expenses for category
