@@ -35,7 +35,7 @@ $( document ).ready( function() {
         request.done(function (response, textStatus, jqXHR){
             // Log a message to the console
             console.log("Hooray, it worked!");
-            $('#messagebox').append('<p>Added!</p>');
+            $('#messagebox').append('<p>Expense added</p>');
             $('#messagebox').css('display','block');
         });
 
