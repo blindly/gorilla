@@ -38,7 +38,11 @@ $( document ).ready( function() {
             
             $('#successbox').html('<p>Fill-up added successfully :)</p>');
             $('#successbox').css('display','block');
-            $('#successbox').delay( 2000 ).hide( "drop", { direction: "right" }, "fast" );
+            
+            setTimeout(function(){ 
+                $('#successbox').delay( 2000 ).hide( "drop", { direction: "right" }, "slow" );
+            }, 3000);
+            
         });
 
         // Callback handler that will be called on failure
@@ -51,7 +55,10 @@ $( document ).ready( function() {
             
             $('#failbox').html('<p>Fill-up failed to add :(</p>');
             $('#failbox').css('display','block');
-            $('#failbox').delay( 2000 ).hide( "drop", { direction: "right" }, "fast" );
+            
+            setTimeout(function(){ 
+                $('#failbox').delay( 2000 ).hide( "drop", { direction: "right" }, "slow" );
+            }, 3000);
         });
 
         // Callback handler that will be called regardless
