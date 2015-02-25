@@ -1,6 +1,6 @@
 <div class="container">
     <div class="col-xs-6 col-lg-4">
-        <form class="form-horizontal">
+        <form id="expenseForm" name="expenseForm" class="form-horizontal">
             <fieldset>
 
                 <!-- Form Name -->
