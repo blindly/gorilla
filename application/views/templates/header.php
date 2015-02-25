@@ -39,8 +39,10 @@
               <ul class="nav navbar-nav">
                 <li><a href="/expenses">Expenses</a></li>
                 <li><a href="/mileage">Mileage</a></li>
+            <!--
                 <li><a href="#reports">Reports</a></li>
                 <li><a href="/help">Help</a></li>
+            -->
               </ul>
             <!--
               <ul class="nav navbar-nav navbar-right">
