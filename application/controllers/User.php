@@ -95,7 +95,7 @@ class User extends CI_Controller {
             {
                 echo "
                     <tr>
-                        <td>$expense->amount</td>
+                        <td>$ $expense->amount</td>
                         <td>$expense->merchant</td>
                         <td>$expense->location</td>
                         <td>$expense->timestamp</td>
