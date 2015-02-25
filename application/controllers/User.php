@@ -92,9 +92,7 @@ class User extends CI_Controller {
     public function listExpenses()
     {
         $this->load->database();
-        
-        echo "<h3 class=\"text-center\">Expenses for " . date('F Y') . "</h3>"; ?>
-        
+                
         // Get All Expenses
         $this->db->where('uuid', $this->session->gorillaUuid);
         $expenses = $this->db->get('expenses');
