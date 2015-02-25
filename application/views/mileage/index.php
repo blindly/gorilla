@@ -116,7 +116,7 @@
             <!-- Default panel contents -->
             <div class="panel-heading">
                 <h3 class="text-center">
-                    Current Expenses
+                    Mileage
                 </h3>
             </div>
             <div class="panel-body"></div>
