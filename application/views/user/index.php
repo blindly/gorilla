@@ -56,11 +56,20 @@
           </div>
         </div>
 
-        <!-- Button -->
+        <!-- Button 
         <div class="form-group">
           <label class="col-md-4 control-label" for="addition"></label>
           <div class="col-md-4">
             <button id="addition" name="addition" class="btn btn-primary">Add Expense</button>
+          </div>
+        </div>-->
+                
+        <!-- Button (Double) -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="addition"></label>
+          <div class="col-md-8">
+            <button id="addition" name="addition" class="btn btn-success">Add Expense</button>
+            <button id="reset" name="reset" class="btn btn-danger">Clear</button>
           </div>
         </div>
 
