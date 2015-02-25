@@ -11,11 +11,23 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="amount">Price</label>  
+          <label class="col-md-4 control-label" for="amount">Total</label>  
           <div class="col-md-6">
             <div class="input-group">
                 <span class="input-group-addon">$</span>
                 <input id="amount" name="amount" type="text" placeholder="How much?" class="form-control input-md" required="">
+            </div>
+          </div>
+            
+        </div>
+                
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="amount">Price Per Gallon</label>  
+          <div class="col-md-6">
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input id="gallon" name="gallon" type="text" placeholder="How much?" class="form-control input-md" required="">
             </div>
           </div>
             

@@ -14,6 +14,7 @@ class Mileage_model extends CI_Model {
     public function add($params = array())
     {
         $params['amount'] = str_replace('$','', $params['amount']);
+        $params['gallon'] = str_replace('$','', $params['gallon']);
         $this->db->insert('mileage', $params);
         
         if ( $this->db->affected_rows() > 0 ) 
