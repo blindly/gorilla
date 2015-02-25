@@ -1,5 +1,10 @@
 <div class="container">
     <div class="col-xs-6 col-lg-4" id="left-side">
+        
+        <div class="alert alert-warning alert-dismissible" role="alert" style="display: none">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        
         <form id="expenseForm" name="expenseForm" class="form-horizontal">
             <fieldset>
 
@@ -8,7 +13,7 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="amount">Amount</label>  
+          <label class="col-md-4 control-label" for="amount">Price</label>  
           <div class="col-md-6">
           <input id="amount" name="amount" type="text" placeholder="How much?" class="form-control input-md" required="">
 
@@ -41,14 +46,26 @@
 
           </div>
         </div>
-
+                
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="description">Description</label>  
+          <label class="col-md-4 control-label" for="datestamp">Date</label>  
           <div class="col-md-6">
-          <input id="description" name="description" type="text" placeholder="Anything else?" class="form-control input-md">
+          <input id="datestamp" name="datestamp" type="text" placeholder="What date?" class="form-control input-md" required="">
 
           </div>
+        </div>
+
+        <div class="form-group">
+            <label for="date-picker-3" class="control-label">C</label>
+            <div class="controls">
+                <div class="input-group">
+                    <label for="date-picker-3" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+
+                    </label>
+                    <input id="date-picker-3" type="text" class="date-picker form-control" />
+                </div>
+            </div>
         </div>
 
         <!-- Button -->

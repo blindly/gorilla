@@ -35,6 +35,8 @@ $( document ).ready( function() {
         request.done(function (response, textStatus, jqXHR){
             // Log a message to the console
             console.log("Hooray, it worked!");
+            $('#messagebox').append('<p>Added!</p>');
+            $('#messagebox').css('display','block');
         });
 
         // Callback handler that will be called on failure
@@ -66,7 +68,8 @@ $( document ).ready( function() {
         }); 
         
     });
-    
+        
+    // Refresh list of expenses
     $.ajax({
           url:"/index.php/user/listExpenses",
           cache:0,

@@ -1,9 +1,9 @@
 <table class='table table-striped'>
     <tr>
-        <th>Amount</th>
-        <th>Merchant</th>
-        <th>Location</th>
-        <th>Date / Time</th>
+        <th>Price</th>
+        <th>Store</th>
+        <th>Area</th>
+        <th>Date</th>
     </tr>
     
     <? foreach( $expenses->result_array() as $expense ) :?>
@@ -11,7 +11,7 @@
             <td><?= $expense->amount ?></td>
             <td><?= $expense->merchant ?></td>
             <td><?= $expense->location ?></td>
-            <td><?= $expense->timestamp ?></td>
+            <td><?= $expense->datestamp ?></td>
         </tr>
     <?php endforeach; ?>
 </table>
