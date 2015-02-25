@@ -49,7 +49,6 @@ class Mileage extends CI_Controller {
             'gallon'        => number_format((float)$this->input->post('gallon'), 2, '.', ''),
             'merchant'      => ucfirst( $this->input->post('merchant') ),
             'location'      => ucfirst( $this->input->post('location') ),
-            'description'   => ucfirst( $this->input->post('description') ),
             'datestamp'     => $this->input->post('datestamp'),
             'deductable'    => $this->input->post('deductable'),
         );
