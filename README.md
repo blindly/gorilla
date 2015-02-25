@@ -17,3 +17,14 @@ PHP based finance tracker
   - Tax Deductable
     - Group
 - Gorilla will have a reports section
+
+## Milestones
+- [x] : Username and UUID assigned on first visit
+- [ ] : Option to upload reciepts
+- [ ] : Tax Deductible
+- [x] : Categories
+- [ ] : Reports
+- [x] : Expenses input
+- [x] : Mileage input
+- [ ] : Expenses reports
+- [ ] : Mileage reports
