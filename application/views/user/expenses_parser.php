@@ -2,10 +2,10 @@
 
 <table class='table table-striped'>
     <tr>
-        <th>Amount</th>
-        <th>Merchant</th>
-        <th>Location</th>
-        <th>Timestamp</th>
+        <th>Spent</th>
+        <th>In</th>
+        <th>At</th>
+        <th>On</th>
     </tr>
     
     {expenses_listings}
@@ -18,6 +18,6 @@
     {/expenses_listings}
     
     <tr>
-        <td colspan=4>Total: ${total}</td>
+        <td colspan=4><strong>Total: ${total}</strong></td>
     </tr>
 </table>

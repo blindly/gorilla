@@ -1,9 +1,15 @@
 <table class='table table-striped'>
     <tr>
+<!--
         <th>Amount</th>
         <th>Merchant</th>
         <th>Location</th>
         <th>Timestamp</th>
+-->
+        <th>Spent</th>
+        <th>In</th>
+        <th>At</th>
+        <th>On</th>
     </tr>
     
     <? foreach( $expenses->result_array() as $expense ) :?>
