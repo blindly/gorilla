@@ -61,7 +61,6 @@ class User extends CI_Controller {
         }
         else
         {
-            $cookie = ;
             if ( $this->input->cookie('gorilla_uuid') )
             {
                 delete_cookie('gorilla_uuid');
