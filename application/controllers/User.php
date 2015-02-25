@@ -76,7 +76,7 @@ class User extends CI_Controller {
             'uuid'          => $gorillaUuid
         );
         
-        if ( ! $this->User_model->check( $params ) )
+        if ( ! $this->User_model->checkUuid( $params ) )
         {
             redirect('/user');
         }
