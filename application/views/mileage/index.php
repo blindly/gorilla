@@ -3,7 +3,7 @@
     <!-- <div class="col-xs-6 col-lg-4" id="left-side"> -->
     <div class="col-xs-6 col-lg-5" id="left-side">
         
-        <form id="carForm" name="carForm" class="form-horizontal">
+        <form id="mileageForm" name="mileageForm" class="form-horizontal">
             <fieldset>
 
         <!-- Form Name -->
@@ -21,28 +21,15 @@
             
         </div>
                 
-        <!-- Multiple Radios -->
+        <!-- Select Basic -->
         <div class="form-group">
           <label class="col-md-4 control-label" for="type">Type</label>
-          <div class="col-md-4">
-          <div class="radio">
-            <label for="type-0">
-              <input type="radio" name="type" id="type-0" value="87" checked="checked">
-              Regular
-            </label>
-            </div>
-          <div class="radio">
-            <label for="type-1">
-              <input type="radio" name="type" id="type-1" value="89">
-              Plus
-            </label>
-            </div>
-          <div class="radio">
-            <label for="type-2">
-              <input type="radio" name="type" id="type-2" value="91">
-              Premium
-            </label>
-            </div>
+          <div class="col-md-5">
+            <select id="type" name="type" class="form-control">
+              <option value="87">Regular</option>
+              <option value="89">Plus</option>
+              <option value="91">Premium</option>
+            </select>
           </div>
         </div>
 
@@ -133,7 +120,7 @@
                 </h3>
             </div>
             <div class="panel-body"></div>
-            <div id="expenseListing"></div>
+            <div id="mileageListing"></div>
         </div>
         
     </div>
