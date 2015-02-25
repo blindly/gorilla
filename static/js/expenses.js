@@ -36,9 +36,15 @@ $( document ).ready( function() {
             // Log a message to the console
             console.log("Hooray, it worked!");
             
+            setTimeout(function(){ jQuery("#div").hide(); }, 3000);
+            
             $('#successbox').html('<p>Expense added successfully :)</p>');
             $('#successbox').css('display','block');
-            $('#successbox').delay( 2000 ).hide( "drop", { direction: "right" }, "fast" );
+
+            setTimeout(function(){ 
+                $('#successbox').delay( 2000 ).hide( "drop", { direction: "right" }, "slow" );
+            }, 3000);
+            
         });
 
         // Callback handler that will be called on failure
@@ -51,7 +57,10 @@ $( document ).ready( function() {
             
             $('#failbox').html('<p>Error adding expenses :(</p>');
             $('#failbox').css('display','block');
-            $('#failbox').delay( 2000 ).hide( "drop", { direction: "right" }, "fast" );
+            
+            setTimeout(function(){ 
+                $('#failbox').delay( 2000 ).hide( "drop", { direction: "right" }, "slow" );
+            }, 3000);
             
         });
 
