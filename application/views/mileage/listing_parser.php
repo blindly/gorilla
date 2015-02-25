@@ -14,8 +14,4 @@
             <td>{datestamp}</td>
         </tr>
     {/expenses_listings}
-    
-    <tr>
-        <td colspan="3" align="center"><strong>Total: ${total}</strong></td>
-    </tr>
 </table>
