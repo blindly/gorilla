@@ -3,8 +3,8 @@
 <table class='table table-striped'>
     <tr>
         <th>Amount</th>
-        <th>Merchant</th>
-        <th>Location</th>
+        <th>Store / Website</th>
+        <th>City</th>
         <th>Datestamp</th>
     </tr>
     
