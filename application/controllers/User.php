@@ -24,7 +24,15 @@ class User extends CI_Controller {
         if ( ! $this->session->gorillaUuid )
         {
             $this->session->gorillaUuid = uuid_generator();
-            $this->session->username = username_generator();
+            
+            if ( $this->User_model->checkUuid( array('uuid' => $this->session->gorillaUuid  ) ) )
+            {
+                $this->session->username = $this->User_model->getUsername( array('uuid' => $this->session->gorillaUuid) );
+            }
+            else
+            {
+                $this->session->username = username_generator();
+            }
         }
         
         $params = array(
