@@ -135,6 +135,10 @@ class User extends CI_Controller {
         $this->db->distinct();
         $this->db->select('category');
         $categories = $this->db->get('expenses');
+        
+        echo "<pre>";
+        print_r($categories->result());
+        echo "</pre>";
 
         if ($categories->num_rows() > 0)
         {
