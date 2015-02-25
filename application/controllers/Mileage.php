@@ -85,27 +85,39 @@ class Mileage extends CI_Controller {
         $this->db->order_by('datestamp', 'desc');
         $expenses = $this->db->get('mileage');
 
-        $total = 0;
-        foreach ($expenses->result() as $expense)
+        if ($expenses->num_rows() > 0 )
         {
-            $total = $total + $expense->amount;
+            $total = 0;
+            foreach ($expenses->result() as $expense)
+            {
+                $total = $total + $expense->amount;
+            }
+
+            $grandTotal = $grandTotal + $total;
+
+            $data = array(
+                'total' => number_format((float)$total, 2, '.', ''),
+                'expenses_listings' => $expenses->result_array()
+            );
+
+            $this->parser->parse('mileage/listing_parser', $data);
+
+
+            $data = array(
+                'grandTotal' => number_format((float)$grandTotal, 2, '.', ''),
+            );
+
+            $this->parser->parse('fragment/grand_total', $data);
         }
+        else
+        {
+            $data = array(
+                'gorillaUuid'   => $this->session->gorillaUuid,
+                'message'      => "No mileage logs entered. You should add some!",
+            );
 
-        $grandTotal = $grandTotal + $total;
-
-        $data = array(
-            'total' => number_format((float)$total, 2, '.', ''),
-            'expenses_listings' => $expenses->result_array()
-        );
-
-        $this->parser->parse('mileage/listing_parser', $data);
-
-
-        $data = array(
-            'grandTotal' => number_format((float)$grandTotal, 2, '.', ''),
-        );
-
-        $this->parser->parse('fragment/grand_total', $data);
+            $this->load->view('fragments/message', $data);
+        }
     }
     
 }
