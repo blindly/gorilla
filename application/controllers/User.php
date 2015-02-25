@@ -85,7 +85,7 @@ class User extends CI_Controller {
             'location'      => ucfirst( $this->input->post('location') ),
             'description'   => ucfirst( $this->input->post('description') ),
             'datestamp'     => $this->input->post('datestamp'),
-
+            'deductable'    => $this->input->post('deductable'),
         );
 
         $this->db->insert('expenses', $data);
