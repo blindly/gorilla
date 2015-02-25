@@ -81,37 +81,29 @@ class User extends CI_Controller {
         
         if ($expenses->num_rows() > 0)
         {
-            ?>
 
+            echo "
                 <table>
                     <tr>
                         <th>Description</th>
                         <th>Amount</th>
                         <th>Merchant</th>
                         <th>Location</th>
-                    </tr>
-
-            <php
+                    </tr>";
             
             foreach ($expenses->result() as $expense)
             {
-                ?>
-
+                echo "
                     <tr>
-                        <td><?= $expense->description ?></td>
-                        <td><?= $expense->amount ?></td>
-                        <td><?= $expense->merchant ?></td>
-                        <td><?= $expense->location ?></td>
-                    </tr>
+                        <td>$expense->description</td>
+                        <td>$expense->amount</td>
+                        <td>$expense->merchant</td>
+                        <td>$expense->location</td>
+                    </tr>";
 
-                <?php
             }
         
-            ?>
-                
-                </table>
-                
-            <?php
+            echo "</table>";
 
         }
     }
