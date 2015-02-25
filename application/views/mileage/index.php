@@ -27,7 +27,7 @@
           <div class="col-md-6">
             <div class="input-group">
                 <span class="input-group-addon">$</span>
-                <input id="gallon" name="gallon" type="text" placeholder="How much per gallon?" class="form-control input-md" required="">
+                <input id="gallon" name="gallon" type="text" placeholder="How much a gallon?" class="form-control input-md" required="">
             </div>
           </div>
             
