@@ -105,8 +105,10 @@ class User extends CI_Controller {
 
         if ($categories->num_rows() > 0)
         {
+            // Initialize grand total for expenses
             $grandTotal = 0;
             
+            // Get categories in an array and then sort it
             $categoriesArray = array();
             foreach ($categories->result() as $result)
             {
@@ -114,10 +116,7 @@ class User extends CI_Controller {
             }
             sort($categoriesArray);
             
-            echo "<pre>";
-            print_r( $categoriesArray );
-            echo "</pre>";
-            
+            // Go through each category and get all the expenses
             foreach ($categoriesArray as $category)
             {
                 // Get All Expenses for category
