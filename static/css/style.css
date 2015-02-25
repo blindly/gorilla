@@ -1,3 +1,4 @@
 .left-side{
-    background-image: imageurl('/static/img/gorilla.jpg');
+    background-image: url('/static/img/gorilla.jpg');
+    background-size:100%;
 }
