@@ -36,7 +36,7 @@ $( document ).ready( function() {
             // Log a message to the console
             console.log("Hooray, it worked!");
             
-            $('#successbox').append('<p>Expense added successfully :)</p>');
+            $('#successbox').html('<p>Expense added successfully :)</p>');
             $('#successbox').css('display','block');
             $('#successbox').hide( "drop", { direction: "down" }, "slow" );
         });
@@ -49,7 +49,7 @@ $( document ).ready( function() {
                 textStatus, errorThrown
             );
             
-            $('#failbox').append('<p>Error adding expenses :(</p>');
+            $('#failbox').html('<p>Error adding expenses :(</p>');
             $('#failbox').css('display','block');
             $('#failbox').hide( "drop", { direction: "down" }, "slow" );
             
