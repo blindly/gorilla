@@ -25,7 +25,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="type">Type</label>
           <div class="col-md-5">
-            <select id="type" name="type" class="form-control">
+            <select id="type" name="type" class="form-control input-md">
               <option value="87">Regular</option>
               <option value="89">Plus</option>
               <option value="91">Premium</option>
