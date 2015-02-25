@@ -40,12 +40,10 @@ class User extends CI_Controller {
     
     public function uuid($gorillaUuid = null)
     {
-        /*
         if ($gorillaUuid)
         {
             $this->session->gorillaUuid = $gorillaUuid;
         }
-        */
         
         $data = array(
             'gorillaUuid' => $gorillaUuid,
@@ -58,7 +56,6 @@ class User extends CI_Controller {
     
     public function addExpenses()
     {
-        /*
         $this->load->database();
 
         $data = array(
@@ -71,7 +68,6 @@ class User extends CI_Controller {
         );
 
         $this->db->insert('expenses', $data);
-        */
         
         echo "<pre>";
         print_r($_SESSION);
