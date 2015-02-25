@@ -79,7 +79,7 @@ class User extends CI_Controller {
         $this->db->where('uuid', $this->session->gorillaUuid);
         $expenses = $this->db->get('expenses');
         
-        foreach ($expense as $expenses)
+        foreach ($expenses as $expense)
         {
             echo $expense->name;
             echo $expense->amount;
