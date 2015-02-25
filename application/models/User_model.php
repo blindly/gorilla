@@ -22,9 +22,7 @@ class User_model extends CI_Model {
     }
     
     public function checkin($params = array())
-    {
-        $this->db->insert('users', $params);
-        
+    {        
         $this->db->where('uuid', $params['uuid']);
         $this->db->update('users', $params);
         
