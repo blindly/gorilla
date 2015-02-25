@@ -55,7 +55,7 @@ class User_model extends CI_Model {
         $this->db->where('uuid', $params['uuid']);
         $rows = $this->db->get('users');
         
-        if ( $valid->num_rows() > 0 ) 
+        if ( $rows->num_rows() > 0 ) 
         {
             foreach ($rows->result() as $row)
             {
