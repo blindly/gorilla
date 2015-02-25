@@ -35,8 +35,10 @@ $( document ).ready( function() {
         request.done(function (response, textStatus, jqXHR){
             // Log a message to the console
             console.log("Hooray, it worked!");
-            $('#messagebox').append('<p>Expense added</p>');
+            $('#messagebox').append('<p>Fill-up Added</p>');
             $('#messagebox').css('display','block');
+            
+            $('#messagebox').hide( "drop", { direction: "down" }, "slow" );
         });
 
         // Callback handler that will be called on failure
@@ -63,7 +65,7 @@ $( document ).ready( function() {
               url:"/mileage/listing",
               cache:0,
               success:function(result){
-                     document.getElementById("expenseListing").innerHTML=result;
+                     document.getElementById("mileageListing").innerHTML=result;
                }
         }); 
         
