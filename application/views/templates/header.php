@@ -38,7 +38,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="/expenses">Expenses</a></li>
-                <li><a href="#mgp">MPG</a></li>
+                <li><a href="/car">Car</a></li>
                 <li><a href="#reports">Reports</a></li>
                 
                 <li><a href="/user/uuid/<?= $gorillaUuid ?>">Remote Device</a></li>
