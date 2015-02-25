@@ -79,11 +79,9 @@ class User extends CI_Controller {
 
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
-            'description'   => $_POST['description'],
-            'amount'        => $_POST['amount'],
-            'merchant'      => $_POST['merchant'],
-            'location'      => $_POST['location'],
-            //'date'        => $_POST['date'],
+            'amount'        => ucfirst( $this->input->post('amount') ),
+            'merchant'      => ucfirst( $this->input->post('merchant') ),
+            'location'      => ucfirst( $this->input->post('location') ),
         );
 
         $this->db->insert('expenses', $data);
@@ -95,9 +93,12 @@ class User extends CI_Controller {
     {
         $this->load->database();
         
+        echo "<h3 class=\"text-center\">Expenses for " . date('F Y') . "</h3>"; ?>
+        
+        // Get All Expenses
         $this->db->where('uuid', $this->session->gorillaUuid);
         $expenses = $this->db->get('expenses');
-        
+                
         if ($expenses->num_rows() > 0)
         {
 
@@ -124,6 +125,49 @@ class User extends CI_Controller {
         
             echo "</table>";
 
+        }
+    }
+
+    public function dashboard()
+    {
+        $this->load->database();
+        $this->load->library('parser');
+        
+        // Get all Categories
+        $this->db->distinct();
+        $this->db->select('category');
+        $categories = $this->db->get('expenses');
+
+        if ($categories->num_rows() > 0)
+        {
+            foreach ($categories->result() as $category)
+            {
+                // Get All Expenses for category
+                $this->db->where('category', $category);
+                $this->db->where('uuid', $this->session->gorillaUuid);
+                $expenses = $this->db->get('expenses');
+
+                $data = array(
+                    'expenses_listings' => $expenses->result_array()
+                );
+
+                $this->parser->parse_string('user/expenses_parser', $data);
+            }
+        }
+        else
+        {
+            // Get All Expenses
+            $this->db->where('uuid', $this->session->gorillaUuid);
+            $expenses = $this->db->get('expenses');
+
+            $data = array(
+                'gorillaUuid' => $gorillaUuid,
+                'expenses' => $expenses,
+            );
+
+            $this->load->view('templates/header', $data);
+            $this->load->view('user/expenses', $data);
+            $this->load->view('templates/footer', $data);
         }
     }
     

@@ -35,6 +35,7 @@
                 <li class="active"><a href="/">Expenses</a></li>
                 <li><a href="#mgp">MPG</a></li>
                 <li><a href="#reports">Reports</a></li>
+                <li><a href="/user/uuid/<?= $gorillaUuid ?>">Access Link</a></li>
               </ul>
             <!--
               <ul class="nav navbar-nav navbar-right">
