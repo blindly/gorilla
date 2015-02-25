@@ -6,7 +6,7 @@
             <fieldset>
 
         <!-- Form Name -->
-        <legend>Expenses</legend>
+        <legend>New Expense</legend>
 
         <!-- Text input-->
         <div class="form-group">
