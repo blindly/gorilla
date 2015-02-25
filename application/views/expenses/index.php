@@ -31,7 +31,7 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="merchant">Merchant</label>  
+          <label class="col-md-4 control-label" for="merchant">Store / Website</label>  
           <div class="col-md-6">
           <input id="merchant" name="merchant" type="text" placeholder="From where?" class="form-control input-md" required="">
 
@@ -40,7 +40,7 @@
                 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="location">Location</label>  
+          <label class="col-md-4 control-label" for="location">City</label>  
           <div class="col-md-6">
           <input id="location" name="location" type="text" placeholder="What area?" class="form-control input-md" required="">
 
