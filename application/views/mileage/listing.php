@@ -1,6 +1,7 @@
 <table class='table table-striped'>
     <tr>
-        <th>Price</th>
+        <th>Total</th>
+        <th>Price/Gallon</th>
         <th>Gas Station</th>
         <th>City</th>
         <th>Date</th>
@@ -8,7 +9,8 @@
     
     <? foreach( $expenses->result_array() as $expense ) :?>
         <tr>
-            <td><?= $expense->amount ?></td>
+            <td>$<?= $expense->amount ?></td>
+            <td>$<?= $expense->gallon ?></td>
             <td><?= $expense->merchant ?></td>
             <td><?= $expense->location ?></td>
             <td><?= $expense->datestamp ?></td>

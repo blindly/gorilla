@@ -1,6 +1,7 @@
 <table class='table table-striped'>
     <tr>
-        <th>Price</th>
+        <th>Total</th>
+        <th>Price/Gallon</th>
         <th>Gas Station</th>
         <th>City</th>
         <th>Date</th>
@@ -9,6 +10,7 @@
     {expenses_listings}
         <tr>
             <td>${amount}</td>
+            <td>${gallon}</td>
             <td>{merchant}</td>
             <td>{location}</td>
             <td>{datestamp}</td>
