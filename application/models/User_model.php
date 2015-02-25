@@ -53,15 +53,18 @@ class User_model extends CI_Model {
     public function getUsername($params = array())
     {        
         $this->db->where('uuid', $params['uuid']);
-        $valid = $this->db->get('users');
+        $rows = $this->db->get('users');
         
         if ( $valid->num_rows() > 0 ) 
         {
-            $username = $valid->result()->username;
-            if ( $username )
-                return $username;
-            else
-                return false;
+            foreach ($rows->result() as $row)
+            {
+                $username = $row->username;
+                if ( $username )
+                    return $username;
+                else
+                    return false;
+            }
         }
     }
 }
