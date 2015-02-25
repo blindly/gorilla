@@ -8,5 +8,9 @@
 
         <!-- Custom Scripts -->
         <script src="/static/js/expenses.js"></script>
+
+        <!--Load Script and Stylesheet datePicker -->
+        <script type="text/javascript" src="/static/js/jquery.simple-dtpicker.js"></script>
+        <link type="text/css" href="/static/css/jquery.simple-dtpicker.css" rel="stylesheet" />
     </body>
 <html>

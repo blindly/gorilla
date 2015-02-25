@@ -12,10 +12,6 @@
         
         <!-- Custom styles for this template -->
         <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
-        
-        <!--Load Script and Stylesheet datePicker -->
-        <script type="text/javascript" src="/static/js/jquery.simple-dtpicker.js"></script>
-        <link type="text/css" href="/static/css/jquery.simple-dtpicker.css" rel="stylesheet" />
     </head>
     <body>
 
@@ -33,8 +29,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li class="active"><a href="/">Expenses</a></li>
+                <li><a href="#about">MPG</a></li>
                 <li><a href="#reports">Reports</a></li>
               </ul>
             <!--
