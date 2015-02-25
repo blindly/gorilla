@@ -13,5 +13,5 @@
             <td>{location}</td>
             <td>{timestamp}</td>
         </tr>
-    {expenses_listings}
+    {/expenses_listings}
 </table>
