@@ -18,6 +18,6 @@
     {/expenses_listings}
     
     <tr>
-        <td colspan="4" style="align: center"><strong>Total: ${total}</strong></td>
+        <td colspan="4" align="center"><strong>Total: ${total}</strong></td>
     </tr>
 </table>
