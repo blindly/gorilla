@@ -1,8 +1,8 @@
 <table class='table table-striped'>
     <tr>
         <th>Price</th>
-        <th>Store</th>
-        <th>Area</th>
+        <th>Store / Website</th>
+        <th>City</th>
         <th>Date</th>
     </tr>
     

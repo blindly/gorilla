@@ -2,10 +2,10 @@
 
 <table class='table table-striped'>
     <tr>
-        <th>Amount</th>
+        <th>Price</th>
         <th>Store / Website</th>
         <th>City</th>
-        <th>Datestamp</th>
+        <th>Date</th>
     </tr>
     
     {expenses_listings}
