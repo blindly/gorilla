@@ -51,7 +51,6 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="datestamp">Date</label>  
           <div class="col-md-6">
-              <label for="date-picker-3" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
             <input id="datestamp" name="datestamp" type="text" placeholder="What date?" class="date-picker form-control input-md" required="">
 
           </div>
