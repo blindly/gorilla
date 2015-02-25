@@ -35,7 +35,7 @@ class Car extends CI_Controller {
         $this->load->view('templates/footer', $data);
     }
     
-    /*
+    
     public function add()
     {
         $valid = true;
@@ -61,10 +61,10 @@ class Car extends CI_Controller {
                 break;
             }
         }
-        
+        */
         
         //if ( $valid )
-        */
+        
             echo $this->Car_model->add($data);
         //else
             //echo "error";
