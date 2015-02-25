@@ -32,12 +32,30 @@ class User_model extends CI_Model {
             $this->output->set_status_header('400');
     }
     
-    public function check($params = array())
+    public function checkUuid($params = array())
     {        
         $this->db->where('uuid', $params['uuid']);
         $valid = $this->db->get('users');
         
         if ( $valid->num_rows() > 0 ) 
             return true;
+    }
+    
+    public function checkUsername($params = array())
+    {        
+        $this->db->where('username', $params['username']);
+        $valid = $this->db->get('users');
+        
+        if ( $valid->num_rows() > 0 ) 
+            return $valid->result()->uuid;
+    }
+    
+    public function getUsername($params = array())
+    {        
+        $this->db->where('uuid', $params['uuid']);
+        $valid = $this->db->get('users');
+        
+        if ( $valid->num_rows() > 0 ) 
+            return $valid->result()->username;
     }
 }

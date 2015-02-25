@@ -22,11 +22,16 @@ class User extends CI_Controller {
         // Load UUID from Cookie if user has been here before
         $this->session->gorillaUuid = $this->input->cookie('gorilla_uuid');
         if ( ! $this->session->gorillaUuid )
+        {
             $this->session->gorillaUuid = uuid_generator();
+            $this->session->username = username_generator();
+            //$this->session->username = $this->User_model->getUsername( 'uuid' => $this->session->gorillaUuid );
+        }
         
         $params = array(
             'ip_address'    => $this->input->ip_address(),
-            'uuid'          => $this->session->gorillaUuid
+            'uuid'          => $this->session->gorillaUuid,
+            'username'      => $this->session->username
         );
         
         if ( ! $this->User_model->check( $params ) )
@@ -80,7 +85,6 @@ class User extends CI_Controller {
             $cookie = array(
                     'name'   => 'uuid',
                     'value'  => $this->session->gorillaUuid,
-                    //'expire' => '86500', /// 24 hours
                     'expire' => '15570000', /// 6 months
                     'domain' => 'gorilla.borke.us',
                     'path'   => '/',
@@ -92,39 +96,51 @@ class User extends CI_Controller {
             
             redirect('/expenses');
         }
-
-        /*
-        // Load UUID from Cookie if user has been here before
-        $this->session->gorillaUuid = $this->input->cookie('gorilla_uuid');
-        if ( ! $this->session->gorillaUuid )
-            $this->session->gorillaUuid = uuid_generator();
+    }
+    
+    public function name($username = null)
+    {
+        $params = array(
+            'ip_address'    => $this->input->ip_address(),
+            'username'      => $username
+        );
+        
+        if ( ! $this->User_model->checkUsername( $params ) )
+        {
+            redirect('/user');
+        }
+        else
+        {
+            if ( $this->input->cookie('gorilla_uuid') )
+            {
+                delete_cookie('gorilla_uuid');
+            }
             
-        $cookie = array(
-                'name'   => 'uuid',
-                'value'  => $this->session->gorillaUuid,
-                //'expire' => '86500', /// 24 hours
-                'expire' => '15570000', /// 6 months
-                'domain' => 'gorilla.borke.us',
-                'path'   => '/',
-                'prefix' => 'gorilla_',
-                'secure' => TRUE
-        );
+            $this->session->gorillaUuid = $gorillaUuid;
+            $this->session->username = $this->User_model->getUsername( 'uuid' => $this->session->gorillaUuid );
+            
+            $params = array(
+                'ip_address'    => $this->input->ip_address(),
+                'username'      => $this->session->username,
+                'uuid'          => $this->session->gorillaUuid
+            );
+            
+            $this->User_model->checkin( $params );
+            
+            $cookie = array(
+                    'name'   => 'uuid',
+                    'value'  => $this->session->gorillaUuid,
+                    'expire' => '15570000', /// 6 months
+                    'domain' => 'gorilla.borke.us',
+                    'path'   => '/',
+                    'prefix' => 'gorilla_',
+                    'secure' => TRUE
+            );
 
-        $this->input->set_cookie($cookie);
-        
-        // Send user to their page
-        //redirect('/expenses');
-        
-        
-        $data = array(
-            'gorillaUuid' => $gorillaUuid,
-        );
-        
-        $this->load->view('templates/header', $data);
-        $this->load->view('expenses/index', $data);
-        $this->load->view('templates/footer', $data);
-        */
-        
+            $this->input->set_cookie($cookie);
+            
+            redirect('/expenses');
+        }
     }
     
 }

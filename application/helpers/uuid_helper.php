@@ -24,3 +24,12 @@ if ( ! function_exists('uuid_generator'))
     }
     
 }
+
+if ( ! function_exists('username_generator'))
+{
+    function username_generator()
+    {
+        return uniqid ();
+    }
+    
+}
