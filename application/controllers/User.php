@@ -90,7 +90,7 @@ class User extends CI_Controller {
         echo "done";
     }
     
-    public function listExpenses()
+    public function listOldExpenses()
     {
         $this->load->database();
                 
@@ -127,7 +127,7 @@ class User extends CI_Controller {
         }
     }
 
-    public function dashboard()
+    public function listExpenses()
     {
         $this->load->database();
         $this->load->library('parser');
@@ -135,13 +135,9 @@ class User extends CI_Controller {
         // Get all Categories
         $this->db->distinct();
         $this->db->select('category');
+        //$this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
         $this->db->where('uuid', $this->session->gorillaUuid);
-    
         $categories = $this->db->get('expenses');
-        
-        echo "<pre>";
-        print_r($categories->result());
-        echo "</pre>";
 
         if ($categories->num_rows() > 0)
         {
@@ -164,10 +160,6 @@ class User extends CI_Controller {
                     'category' => $result->category,
                     'expenses_listings' => $expenses->result_array()
                 );
-                
-                echo "<pre>";
-                print_r($data);
-                echo "</pre>";
 
                 $this->parser->parse('user/expenses_parser', $data);
             }
