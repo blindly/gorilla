@@ -5,7 +5,7 @@
         <th>Amount</th>
         <th>Merchant</th>
         <th>Location</th>
-        <th>Date / Time</th>
+        <th>Datestamp</th>
     </tr>
     
     {expenses_listings}
@@ -13,7 +13,7 @@
             <td>${amount}</td>
             <td>{merchant}</td>
             <td>{location}</td>
-            <td>{timestamp}</td>
+            <td>{datestamp}</td>
         </tr>
     {/expenses_listings}
     
