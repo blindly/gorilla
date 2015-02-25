@@ -107,14 +107,21 @@ class User extends CI_Controller {
         {
             $grandTotal = 0;
             
-            echo "<pre>";
-            print_r( $categories->result() );
-            echo "</pre>";
-            
+            $categoriesArray = array();
             foreach ($categories->result() as $result)
             {
+                array_push($categoriesArray, $result->category);
+            }
+            sort($categoriesArray);
+            
+            echo "<pre>";
+            print_r( $categoriesArray );
+            echo "</pre>";
+            
+            foreach ($categoriesArray as $category)
+            {
                 // Get All Expenses for category
-                $this->db->where('category', $result->category);
+                $this->db->where('category', $category);
                 $this->db->where('uuid', $this->session->gorillaUuid);
                 //$this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
                 $expenses = $this->db->get('expenses');
@@ -129,7 +136,7 @@ class User extends CI_Controller {
 
                 $data = array(
                     'total' => $total,
-                    'category' => $result->category,
+                    'category' => $category,
                     'expenses_listings' => $expenses->result_array()
                 );
 
