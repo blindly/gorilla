@@ -1,5 +1,7 @@
         <center><em>&copy; Borke.US 2015</em></center>
 
+        <div id="debug well">Debug: User <?= $gorillaUuid ?></div>
+
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
