@@ -26,7 +26,7 @@ $( document ).ready( function() {
 
         // Fire off the request to /form.php
         request = $.ajax({
-            url: "/form.php",
+            url: "/index.php/user/addExpenses",
             type: "post",
             data: serializedData
         });
