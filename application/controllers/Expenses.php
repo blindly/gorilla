@@ -36,7 +36,10 @@ class Expenses extends CI_Controller {
     }
     
     public function add()
-    {   
+    {
+        $valid = true;
+        $requiredFields = array('uuid', 'amount', 'category', 'merchant', 'location', 'datestamp');
+        
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
             'amount'        => number_format((float)$this->input->post('amount'), 2, '.', ''),
@@ -47,17 +50,20 @@ class Expenses extends CI_Controller {
             'datestamp'     => $this->input->post('datestamp'),
             'deductable'    => $this->input->post('deductable'),
         );
-
-        /*
-        $this->db->insert('expenses', $data);
         
-        if ( $this->db->affected_rows() > 0 ) 
-            echo "done";
+        foreach ($requiredFields as $field)
+        {
+            if ( ! array_key_exists($field, $requiredFields) )
+            {
+                $valid = false;
+                break;
+            }
+        }
+        
+        if ( $valid )
+            echo $this->Expenses_model->add($data);
         else
             echo "error";
-        */
-        
-        echo $this->Expenses_model->add($data);
     }
     
     public function listing()
