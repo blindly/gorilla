@@ -117,7 +117,7 @@ class User extends CI_Controller {
             }
             
             $this->session->gorillaUuid = $gorillaUuid;
-            $this->session->username = $this->User_model->getUsername( 'uuid' => $this->session->gorillaUuid );
+            $this->session->username = $this->User_model->getUsername( array('uuid' => $this->session->gorillaUuid) );
             
             $params = array(
                 'ip_address'    => $this->input->ip_address(),
