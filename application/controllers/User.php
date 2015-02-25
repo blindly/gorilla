@@ -11,6 +11,7 @@ class User extends CI_Controller {
         // Load Helpers
         $this->load->helper('url');
         $this->load->helper('uuid_helper');
+        $this->load->helper('cookie');
     }
     
     public function index()
