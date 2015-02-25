@@ -16,9 +16,22 @@ class User_model extends CI_Model {
         $this->db->insert('users', $params);
         
         if ( $this->db->affected_rows() > 0 ) 
-            echo "done";
+            $this->output->set_status_header('200');
         else
-            echo "error";
+            $this->output->set_status_header('500');
+    }
+    
+    public function checkin($params = array())
+    {
+        $this->db->insert('users', $params);
+        
+        $this->db->where('uuid', $params['uuid']);
+        $this->db->update('users', $params);
+        
+        if ( $this->db->affected_rows() > 0 ) 
+            $this->output->set_status_header('200');
+        else
+            $this->output->set_status_header('500');
     }
     
     public function check($params = array())

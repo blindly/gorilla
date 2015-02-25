@@ -33,6 +33,10 @@ class User extends CI_Controller {
         {
             $this->User_model->register( $params );
         }
+        else
+        {
+            $this->User_model->checkin( $params );
+        }
         
         $cookie = array(
                 'name'   => 'uuid',
@@ -64,6 +68,8 @@ class User extends CI_Controller {
         }
         else
         {
+            $this->User_model->checkin( $params );
+            
             if ( $this->input->cookie('gorilla_uuid') )
             {
                 delete_cookie('gorilla_uuid');
