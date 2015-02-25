@@ -176,9 +176,7 @@ class User extends CI_Controller {
                 'expenses'      => $expenses,
             );
 
-            $this->load->view('templates/header', $data);
             $this->load->view('user/expenses', $data);
-            $this->load->view('templates/footer', $data);
         }
     }
     
