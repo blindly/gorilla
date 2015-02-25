@@ -26,7 +26,7 @@ $( document ).ready( function() {
 
         // Fire off the request to /form.php
         request = $.ajax({
-            url: "/index.php/user/addExpenses",
+            url: "/expenses/add",
             type: "post",
             data: serializedData
         });
@@ -60,7 +60,7 @@ $( document ).ready( function() {
         
         // Load List of Expenses
         $.ajax({
-              url:"/index.php/user/listExpenses",
+              url:"/expenses/listing",
               cache:0,
               success:function(result){
                      document.getElementById("expenseListing").innerHTML=result;
@@ -71,7 +71,7 @@ $( document ).ready( function() {
         
     // Refresh list of expenses
     $.ajax({
-          url:"/index.php/user/listExpenses",
+          url:"/expenses/listing",
           cache:0,
           success:function(result){
                  document.getElementById("expenseListing").innerHTML=result;
