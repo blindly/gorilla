@@ -40,8 +40,6 @@
                 <li><a href="/expenses">Expenses</a></li>
                 <li><a href="/mileage">Mileage</a></li>
                 <li><a href="#reports">Reports</a></li>
-                
-                <li><a href="/user/uuid/<?= $gorillaUuid ?>">Remote Access</a></li>
                 <li><a href="/help">Help</a></li>
               </ul>
             <!--
