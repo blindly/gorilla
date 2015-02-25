@@ -20,7 +20,7 @@
                 <div class="control-group">
                   <label class="control-label" for="amount">Amount</label>
                   <div class="controls">
-                    <input id="amount" name="amount" type="text" placeholder="" class="input-large">
+                    <input id="amount" name="amount" type="text" placeholder="How much did you spend?" class="input-large">
 
                   </div>
                 </div>
@@ -29,7 +29,7 @@
                 <div class="control-group">
                   <label class="control-label" for="category">Category</label>
                   <div class="controls">
-                    <input id="category" name="category" type="text" placeholder="" class="input-large">
+                    <input id="category" name="category" type="text" placeholder="Broad category of purchase" class="input-large">
 
                   </div>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="control-group">
                   <label class="control-label" for="merchant">Merchant</label>
                   <div class="controls">
-                    <input id="merchant" name="merchant" type="text" placeholder="" class="input-large">
+                    <input id="merchant" name="merchant" type="text" placeholder="What store did you get it from?" class="input-large">
 
                   </div>
                 </div>
@@ -47,7 +47,16 @@
                 <div class="control-group">
                   <label class="control-label" for="location">Location</label>
                   <div class="controls">
-                    <input id="location" name="location" type="text" placeholder="" class="input-large">
+                    <input id="location" name="location" type="text" placeholder="Where was this?" class="input-large">
+
+                  </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="description">Description</label>
+                  <div class="controls">
+                    <input id="description" name="description" type="text" placeholder="Any additional details?" class="input-large">
 
                   </div>
                 </div>

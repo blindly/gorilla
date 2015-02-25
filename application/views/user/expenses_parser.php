@@ -10,7 +10,7 @@
     
     {expenses_listings}
         <tr>
-            <td>{amount}</td>
+            <td>${amount}</td>
             <td>{merchant}</td>
             <td>{location}</td>
             <td>{timestamp}</td>
