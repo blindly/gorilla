@@ -51,21 +51,10 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="datestamp">Date</label>  
           <div class="col-md-6">
-          <input id="datestamp" name="datestamp" type="text" placeholder="What date?" class="form-control input-md" required="">
+              <label for="date-picker-3" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
+            <input id="datestamp" name="datestamp" type="text" placeholder="What date?" class="date-picker form-control input-md" required="">
 
           </div>
-        </div>
-
-        <div class="form-group">
-            <label for="date-picker-3" class="control-label">C</label>
-            <div class="controls">
-                <div class="input-group">
-                    <label for="date-picker-3" class="input-group-addon btn"><span class="glyphicon glyphicon-calendar"></span>
-
-                    </label>
-                    <input id="date-picker-3" type="text" class="date-picker form-control" />
-                </div>
-            </div>
         </div>
 
         <!-- Button -->
