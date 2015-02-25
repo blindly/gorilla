@@ -16,4 +16,8 @@
             <td>{timestamp}</td>
         </tr>
     {/expenses_listings}
+    
+    <tr>
+        <td colspan=4>Total: ${total}</td>
+    </tr>
 </table>
