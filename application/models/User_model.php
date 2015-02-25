@@ -18,7 +18,7 @@ class User_model extends CI_Model {
         if ( $this->db->affected_rows() > 0 ) 
             $this->output->set_status_header('200');
         else
-            $this->output->set_status_header('500');
+            $this->output->set_status_header('400');
     }
     
     public function checkin($params = array())
@@ -31,7 +31,7 @@ class User_model extends CI_Model {
         if ( $this->db->affected_rows() > 0 ) 
             $this->output->set_status_header('200');
         else
-            $this->output->set_status_header('500');
+            $this->output->set_status_header('400');
     }
     
     public function check($params = array())
