@@ -1,4 +1,4 @@
-        <center><em>&copy; 2014</em></center>
+        <center><em>&copy; Borke.US 2015</em></center>
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
