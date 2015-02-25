@@ -99,6 +99,12 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         
-        <div id="expenseListing"></div>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+            </div>
+            <div id="expenseListing"></div>
+        </div>
     </div>
 </div>
