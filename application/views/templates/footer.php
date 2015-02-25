@@ -5,7 +5,9 @@
             <p>
                 User: <?= $username ?><br>
                 Uuid: <?= $gorillaUuid ?><br>
-                Link: <a href="/user/name/<?= $username ?>">Remote Access Link</a>
+                Link: <a href="/user/name/<?= $username ?>">Remote Access Link</a><br>
+                Link: <a href="/user/uuid/<?= $gorillaUuid ?>">Remote Access Link</a><br>
+
             </p>
         </div>
 
