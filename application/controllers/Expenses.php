@@ -17,11 +17,12 @@ class Expenses extends CI_Controller {
         
         // Load Models
         $this->load->model('Expenses_model');
+        $this->load->model('User_model');
     }
     
     public function index()
     {    
-        if ( ! $this->session->gorillaUuid)
+        if ( ! $this->session->username)
         {
             redirect('/user');
         }
@@ -38,10 +39,7 @@ class Expenses extends CI_Controller {
     }
     
     public function add()
-    {
-        $valid = true;
-        $requiredFields = array('uuid', 'amount', 'category', 'merchant', 'location', 'datestamp');
-        
+    {        
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
             'amount'        => number_format((float)$this->input->post('amount'), 2, '.', ''),
