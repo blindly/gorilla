@@ -3,84 +3,58 @@
         <form id="expenseForm" name="expenseForm" class="form-horizontal">
             <fieldset>
 
-                <!-- Form Name -->
-                <legend>Expenses</legend>
+        <!-- Form Name -->
+        <legend>Expenses</legend>
 
-                <!-- Text input-->
-                <!-- 
-                <div class="control-group">
-                  <label class="control-label" for="description">Description</label>
-                  <div class="controls">
-                    <input id="description" name="description" type="text" placeholder="" class="input-medium">
-                  </div>
-                </div>
-                -->
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="amount">Amount</label>  
+          <div class="col-md-6">
+          <input id="amount" name="amount" type="text" placeholder="How much?" class="form-control input-md" required="">
 
-                <!-- Text input-->
-                <div class="control-group">
-                  <label class="control-label" for="amount">Amount</label>
-                  <div class="controls">
-                    <input id="amount" name="amount" type="text" placeholder="How much did you spend?" class="input-xlarge">
+          </div>
+        </div>
 
-                  </div>
-                </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="category">Category</label>  
+          <div class="col-md-6">
+          <input id="category" name="category" type="text" placeholder="Categorize it!" class="form-control input-md" required="">
 
-                <!-- Text input-->
-                <div class="control-group">
-                  <label class="control-label" for="category">Category</label>
-                  <div class="controls">
-                    <input id="category" name="category" type="text" placeholder="Broad category of purchase" class="input-xlarge">
+          </div>
+        </div>
 
-                  </div>
-                </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="merchant">Merchant</label>  
+          <div class="col-md-6">
+          <input id="merchant" name="merchant" type="text" placeholder="Where did you get it?" class="form-control input-md" required="">
 
-                <!-- Text input-->
-                <div class="control-group">
-                  <label class="control-label" for="merchant">Merchant</label>
-                  <div class="controls">
-                    <input id="merchant" name="merchant" type="text" placeholder="What store did you get it from?" class="input-xlarge">
+          </div>
+        </div>
 
-                  </div>
-                </div>
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="description">Description</label>  
+          <div class="col-md-6">
+          <input id="description" name="description" type="text" placeholder="Anything else?" class="form-control input-md">
 
-                <!-- Text input-->
-                <div class="control-group">
-                  <label class="control-label" for="location">Location</label>
-                  <div class="controls">
-                    <input id="location" name="location" type="text" placeholder="Where was this?" class="input-xlarge">
+          </div>
+        </div>
 
-                  </div>
-                </div>
-                
-                <!-- Text input-->
-                <div class="control-group">
-                  <label class="control-label" for="description">Description</label>
-                  <div class="controls">
-                    <input id="description" name="description" type="text" placeholder="Any additional details?" class="input-large">
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="addition"></label>
+          <div class="col-md-4">
+            <button id="addition" name="addition" class="btn btn-primary">Add Expense</button>
+          </div>
+        </div>
 
-                  </div>
-                </div>
-
-                <!-- Text input-->
-                <!--
-                <div class="control-group">
-                  <label class="control-label" for="location">Date / Time</label>
-                  <div class="controls">
-                    <input id="date" name="date" type="text" placeholder="" class="input-large form_datetime">
-                  </div>
-                </div>
-                -->
-
-                <!-- Button -->
-                <div class="control-group">
-                  <label class="control-label" for="addition"></label>
-                  <div class="controls">
-                    <button id="addition" name="addition" class="btn btn-primary">Add Expense</button>
-                  </div>
-                </div>
-
-            </fieldset>
+        </fieldset>
         </form>
+
+            
+            
     </div>
     
     <div class="col-xs-12 col-sm-6 col-lg-8" id="right-side">
