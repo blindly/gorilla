@@ -35,10 +35,26 @@ class User extends CI_Controller {
         }
         
         // Send user to their page
-        redirect('/user/uuid/'. $this->session->gorillaUuid);
+        redirect('/user/me');
 	}
     
     public function uuid($gorillaUuid = null)
+    {
+        if ($gorillaUuid)
+        {
+            $this->session->gorillaUuid = $gorillaUuid;
+        }
+        
+        $data = array(
+            'gorillaUuid' => $gorillaUuid,
+        );
+        
+        $this->load->view('templates/header', $data);
+        $this->load->view('user/index', $data);
+        $this->load->view('templates/footer', $data);
+    }
+    
+    public function me()
     {
         if ($gorillaUuid)
         {
