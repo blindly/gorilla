@@ -1,9 +1,5 @@
 <div class="container">
     
-    <div id="messagebox" class="alert alert-success alert-dismissible" role="alert" style="display: none">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    </div>
-    
     <div class="col-xs-6 col-lg-4" id="left-side">
         
         <form id="expenseForm" name="expenseForm" class="form-horizontal">
@@ -95,7 +91,9 @@
         </fieldset>
         </form>
 
-            
+        <div id="messagebox" class="alert alert-success alert-dismissible" role="alert" style="display: none">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
             
     </div>
     
