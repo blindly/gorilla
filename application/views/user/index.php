@@ -7,19 +7,20 @@
                 <legend>Expenses</legend>
 
                 <!-- Text input-->
+                <!-- 
                 <div class="control-group">
                   <label class="control-label" for="description">Description</label>
                   <div class="controls">
                     <input id="description" name="description" type="text" placeholder="" class="input-medium">
-
                   </div>
                 </div>
+                -->
 
                 <!-- Text input-->
                 <div class="control-group">
                   <label class="control-label" for="amount">Amount</label>
                   <div class="controls">
-                    <input id="amount" name="amount" type="text" placeholder="" class="input-medium">
+                    <input id="amount" name="amount" type="text" placeholder="" class="input-large">
 
                   </div>
                 </div>
@@ -28,7 +29,7 @@
                 <div class="control-group">
                   <label class="control-label" for="category">Category</label>
                   <div class="controls">
-                    <input id="category" name="category" type="text" placeholder="" class="input-medium">
+                    <input id="category" name="category" type="text" placeholder="" class="input-large">
 
                   </div>
                 </div>
@@ -37,7 +38,7 @@
                 <div class="control-group">
                   <label class="control-label" for="merchant">Merchant</label>
                   <div class="controls">
-                    <input id="merchant" name="merchant" type="text" placeholder="" class="input-medium">
+                    <input id="merchant" name="merchant" type="text" placeholder="" class="input-large">
 
                   </div>
                 </div>
@@ -46,18 +47,20 @@
                 <div class="control-group">
                   <label class="control-label" for="location">Location</label>
                   <div class="controls">
-                    <input id="location" name="location" type="text" placeholder="" class="input-medium">
+                    <input id="location" name="location" type="text" placeholder="" class="input-large">
 
                   </div>
                 </div>
 
                 <!-- Text input-->
+                <!--
                 <div class="control-group">
                   <label class="control-label" for="location">Date / Time</label>
                   <div class="controls">
-                    <input id="date" name="date" type="text" placeholder="" class="input-medium form_datetime">
+                    <input id="date" name="date" type="text" placeholder="" class="input-large form_datetime">
                   </div>
                 </div>
+                -->
 
                 <!-- Button -->
                 <div class="control-group">

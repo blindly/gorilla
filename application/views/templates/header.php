@@ -10,6 +10,9 @@
         <!-- CSS -->
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
         
+        <!-- CSS Yeti -->
+        <link href="/static/external/bootstrap-themes/bootstrap-yeti.min.css" rel="stylesheet">
+        
         <!-- Custom styles for this template -->
         <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
     </head>
@@ -30,7 +33,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="/">Expenses</a></li>
-                <li><a href="#about">MPG</a></li>
+                <li><a href="#mgp">MPG</a></li>
                 <li><a href="#reports">Reports</a></li>
               </ul>
             <!--
