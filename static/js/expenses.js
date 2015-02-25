@@ -17,18 +17,20 @@ $( "#addition" ).click(function() {
     var location = 'location=' . $('#location').val();
     var myExpenses = new Array(description, location, category, merchant, location);
     
-    $.ajax({
-        type: "GET",
-        url: "https://gorilla.borke.us/index.php/user/addExpenses",
-        data: myExpenses.join('&'),
-        success: function()
-        {
-          console.log("AJAX request was successfull");
-        },
-          error:function()
-        {
-          console.log("AJAX request was a failure");
-        }
+    $.post("/index.php/user/addExpenses",
+    {
+        description: $('#description').val(), 
+        amount: $('#amount').val(), 
+        category: $('#category').val(), 
+        merchant: $('#merchant').val(), 
+        location: $('#location').val(), 
+    },
+    function(data, textStatus, jqXHR)
+    {
+        //data - response from server
+    }).fail(function(jqXHR, textStatus, errorThrown) 
+    {
+        alert(textStatus);
     });
     
 /*
