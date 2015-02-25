@@ -51,6 +51,7 @@ class Expenses extends CI_Controller {
             'deductable'    => $this->input->post('deductable'),
         );
         
+        /*
         foreach ($requiredFields as $field)
         {
             if ( ! array_key_exists($field, $requiredFields) )
@@ -59,11 +60,12 @@ class Expenses extends CI_Controller {
                 break;
             }
         }
+        */
         
-        if ( $valid )
+        //if ( $valid )
             echo $this->Expenses_model->add($data);
-        else
-            echo "error";
+        //else
+            //echo "error";
     }
     
     public function listing()
