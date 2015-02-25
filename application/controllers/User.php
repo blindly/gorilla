@@ -138,10 +138,10 @@ class User extends CI_Controller {
 
         if ($categories->num_rows() > 0)
         {
-            foreach ($categories->result() as $category)
+            foreach ($categories->result() as $result)
             {
                 // Get All Expenses for category
-                $this->db->where('category', $category);
+                $this->db->where('category', $result->category);
                 $this->db->where('uuid', $this->session->gorillaUuid);
                 $expenses = $this->db->get('expenses');
 
