@@ -1,6 +1,6 @@
         <center><em>&copy; Borke.US 2015</em></center>
 
-        <div id="debug well">Debug: User <?= $gorillaUuid ?></div>
+        <div id="debug" class="well text-center">Debug: User <?= $gorillaUuid ?></div>
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
