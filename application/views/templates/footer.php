@@ -3,7 +3,7 @@
         <div id="debug" class="well text-center">
             <p>Debug</p>
             <p>Uuid: <?= $gorillaUuid ?></p>
-            <p>User: User <?= $gorillaUuid ?></p>
+            <p>User: User <?= $username ?></p>
         </div>
 
         <!-- Bootstrap core JavaScript
