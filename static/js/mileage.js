@@ -35,10 +35,10 @@ $( document ).ready( function() {
         request.done(function (response, textStatus, jqXHR){
             // Log a message to the console
             console.log("Hooray, it worked!");
-            $('#messagebox').append('<p>Fill-up Added</p>');
-            $('#messagebox').css('display','block');
             
-            $('#messagebox').hide( "drop", { direction: "down" }, "slow" );
+            $('#successbox').append('<p>Fill-up added successfully :)</p>');
+            $('#successbox').css('display','block');
+            $('#successbox').hide( "drop", { direction: "down" }, "slow" );
         });
 
         // Callback handler that will be called on failure
@@ -48,6 +48,10 @@ $( document ).ready( function() {
                 "The following error occurred: "+
                 textStatus, errorThrown
             );
+            
+            $('#failbox').append('<p>Fill-up failed to add :(</p>');
+            $('#failbox').css('display','block');
+            $('#failbox').hide( "drop", { direction: "down" }, "slow" );
         });
 
         // Callback handler that will be called regardless

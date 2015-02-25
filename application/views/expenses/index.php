@@ -97,10 +97,16 @@
     <!-- <div class="col-xs-12 col-sm-6 col-lg-8" id="right-side"> -->
     <div class="col-xs-12 col-sm-6 col-lg-7" id="right-side">
 
-
-        <div id="messagebox" class="alert alert-success alert-dismissible" role="alert" style="display: none">
+        <!-- Alerts -->
+        <div id="successbox" class="alert alert-success alert-dismissible" role="alert" style="display: none">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
+        
+        <div id="failbox" class="alert alert-danger alert-dismissible" role="alert" style="display: none">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        
+        <!-- End Alerts -->
         
         <div class="panel panel-default">
             <!-- Default panel contents -->
