@@ -19,7 +19,17 @@ class User extends CI_Controller {
         $this->session->gorillaUuid = $this->input->cookie('gorilla_uuid');
         if ( ! $this->session->gorillaUuid )
             $this->session->gorillaUuid = uuid_generator();
-            
+        
+        $params = array(
+            'ip_address'    => $this->input->ip_address(),
+            'uuid'          => $this->session->gorillaUuid
+        );
+        
+        if ( ! $this->User_model->check( $params ) )
+        {
+            $this->User_model->register( $params );
+        }
+        
         $cookie = array(
                 'name'   => 'uuid',
                 'value'  => $this->session->gorillaUuid,
@@ -41,6 +51,12 @@ class User extends CI_Controller {
     {
         if ($gorillaUuid)
         {
+            $cookie = $this->input->cookie('gorilla_uuid');
+            if ($cookie)
+            {
+                $this->input->delete_cookie('gorilla_uuid');
+            }
+            
             $this->session->gorillaUuid = $gorillaUuid;
         }
 

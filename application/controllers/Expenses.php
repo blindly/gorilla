@@ -34,6 +34,8 @@ class Expenses extends CI_Controller {
     
     public function add()
     {
+        $this->load->model('expenses_model');
+        
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
             'amount'        => number_format((float)$this->input->post('amount'), 2, '.', ''),
@@ -45,12 +47,16 @@ class Expenses extends CI_Controller {
             'deductable'    => $this->input->post('deductable'),
         );
 
+        /*
         $this->db->insert('expenses', $data);
         
         if ( $this->db->affected_rows() > 0 ) 
             echo "done";
         else
             echo "error";
+        */
+        
+        echo $this->Expenses_model->add($data);
     }
     
     public function listing()
