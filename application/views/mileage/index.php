@@ -1,7 +1,6 @@
 <div class="container">
     
-    <!-- <div class="col-xs-6 col-lg-4" id="left-side"> -->
-    <div class="col-xs-6 col-lg-5" id="left-side">
+    <div class="col-xs-12 col-sm-6 col-lg-7" id="left-side">
         
         <form id="mileageForm" name="mileageForm" class="form-horizontal">
             <fieldset>

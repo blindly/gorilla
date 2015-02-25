@@ -37,8 +37,10 @@ class User_model extends CI_Model {
         $this->db->where('uuid', $params['uuid']);
         $valid = $this->db->get('users');
         
-        if ( $valid->num_rows() > 0 ) 
+        if ( $valid->num_rows() > 0 )
+        {
             return true;
+        }
     }
     
     public function checkUsername($params = array())
