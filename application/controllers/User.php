@@ -142,6 +142,8 @@ class User extends CI_Controller {
 
         if ($categories->num_rows() > 0)
         {
+            $grandTotal = 0;
+            
             foreach ($categories->result() as $result)
             {
                 // Get All Expenses for category
@@ -156,6 +158,8 @@ class User extends CI_Controller {
                     $total = $total + $expense->amount;
                 }
 
+                $grandTotal = $grandTotal + $total;
+
                 $data = array(
                     'total' => $total,
                     'category' => $result->category,
@@ -164,6 +168,13 @@ class User extends CI_Controller {
 
                 $this->parser->parse('user/expenses_parser', $data);
             }
+    
+            $data = array(
+                '$grandTotal' => $grandTotal
+            );
+
+            $this->parser->parse('user/grand_total', $data);
+    
         }
         else
         {
