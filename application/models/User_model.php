@@ -56,6 +56,12 @@ class User_model extends CI_Model {
         $valid = $this->db->get('users');
         
         if ( $valid->num_rows() > 0 ) 
-            return $valid->result()->username;
+        {
+            $username = $valid->result()->username;
+            if ( $username )
+                return $username;
+            else
+                return false;
+        }
     }
 }
