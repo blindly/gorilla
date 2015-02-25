@@ -12,7 +12,7 @@
         
         
         <!-- CSS Yeti -->
-        <!--<link href="/static/external/bootstrap-themes/bootstrap-yeti.min.css" rel="stylesheet">-->
+        <link href="/static/external/bootstrap-themes/bootstrap-yeti.min.css" rel="stylesheet">
         
         <!-- Custom styles for this template -->
         <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">

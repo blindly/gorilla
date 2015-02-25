@@ -7,8 +7,8 @@
         <th>Timestamp</th>
 -->
         <th>Spent</th>
-        <th>In</th>
         <th>At</th>
+        <th>In</th>
         <th>On</th>
     </tr>
     

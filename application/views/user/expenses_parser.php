@@ -3,8 +3,8 @@
 <table class='table table-striped'>
     <tr>
         <th>Spent</th>
-        <th>In</th>
         <th>At</th>
+        <th>In</th>
         <th>On</th>
     </tr>
     
