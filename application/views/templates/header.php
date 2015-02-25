@@ -14,6 +14,9 @@
         <!-- CSS Yeti -->
         <link href="/static/external/bootstrap-themes/bootstrap-yeti.min.css" rel="stylesheet">
         
+        <!-- CSS Jquery UI -->
+        <link href="/static/external/jquery-ui-1.11.3.custom/jquery-ui.min.css" rel="stylesheet">
+        
         <!-- Custom styles for this template -->
         <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
         <link href="/static/css/style.css" rel="stylesheet">
