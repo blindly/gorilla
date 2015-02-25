@@ -3,13 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends CI_Controller {
 
-    public function index()
-	{
+    public function __construct()
+    {
+        parent::__construct();
+        // Your own constructor code
+        
         // Load Helpers
         $this->load->helper('url');
-        
         $this->load->helper('uuid_helper');
-        
+    }
+    
+    public function index()
+	{    
         // Load UUID from Cookie if user has been here before
         $this->session->gorillaUuid = $this->input->cookie('gorilla_uuid');
         if ( ! $this->session->gorillaUuid )

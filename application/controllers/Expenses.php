@@ -7,13 +7,17 @@ class Expenses extends CI_Controller {
     {
         parent::__construct();
         // Your own constructor code
+        
+        // Load Helpers
+        $this->load->helper('url');
+        $this->load->helper('uuid_helper');
+        
+        // Load Database
+        $this->load->database();
     }
     
     public function index()
-    {
-        // Load Helpers
-        $this->load->helper('url');
-        
+    {    
         if ( ! $this->session->gorillaUuid)
         {
             redirect('/user');
@@ -30,8 +34,6 @@ class Expenses extends CI_Controller {
     
     public function add()
     {
-        $this->load->database();
-
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
             'amount'        => number_format((float)$this->input->post('amount'), 2, '.', ''),
@@ -53,7 +55,6 @@ class Expenses extends CI_Controller {
     
     public function listing()
     {
-        $this->load->database();
         $this->load->library('parser');
         
         // Get all Categories
