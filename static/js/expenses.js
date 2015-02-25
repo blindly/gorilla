@@ -79,7 +79,8 @@ $( document ).ready( function() {
     });
     
     // Get Date
-    $(".date-picker").datepicker();
+    //$(".date-picker").datepicker();
+    $( "#datepicker" ).datepicker( "option", "dateFormat", "yy-mm-dd" );
 
     $(".date-picker").on("change", function () {
         var id = $(this).attr("id");
