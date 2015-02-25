@@ -136,7 +136,7 @@ class User extends CI_Controller {
                 $grandTotal = $grandTotal + $total;
 
                 $data = array(
-                    'total' => $total,
+                    'total' => number_format((float)$total, 2, '.', ''),
                     'category' => $category,
                     'expenses_listings' => $expenses->result_array()
                 );
@@ -145,7 +145,7 @@ class User extends CI_Controller {
             }
     
             $data = array(
-                'grandTotal' => $grandTotal
+                'grandTotal' => number_format((float)$grandTotal, 2, '.', ''),
             );
 
             $this->parser->parse('user/grand_total', $data);
