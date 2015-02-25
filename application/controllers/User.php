@@ -149,6 +149,10 @@ class User extends CI_Controller {
                     'category' => $result->category,
                     'expenses_listings' => $expenses->result_array()
                 );
+                
+                echo "<pre>";
+                print_r($data);
+                echo "</pre>";
 
                 $this->parser->parse('user/expenses_parser', $data);
             }
