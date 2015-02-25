@@ -2,8 +2,10 @@
 
         <div id="debug" class="well text-center">
             <p>Debug</p>
-            <p>Uuid: <?= $gorillaUuid ?></p>
-            <p>User: User <?= $username ?></p>
+            <p>
+                User: User <?= $username ?><br>
+                Uuid: <?= $gorillaUuid ?><br>
+            </p>
         </div>
 
         <!-- Bootstrap core JavaScript
