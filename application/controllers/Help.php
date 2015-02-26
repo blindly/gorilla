@@ -5,10 +5,13 @@ class Help extends CI_Controller {
 
 	public function index()
 	{
-        $params = array('gorillaUuid' => $this->session->gorillaUuid);
+        $data = array(
+            'gorillaUuid'   => $this->session->gorillaUuid,
+            'controller'    => $this->uri->segment(1)
+        );
             
-        $this->load->view('templates/header', $params);
-		$this->load->view('help/index', $params);
-        $this->load->view('templates/footer', $params);
+        $this->load->view('templates/header', $data);
+		$this->load->view('help/index', $data);
+        $this->load->view('templates/footer', $data);
 	}
 }
