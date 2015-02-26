@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-        if ( ! $this->session->gorillaUuid)
+        if ($this->session->gorillaUuid)
         {
             if ( ! $this->User_model->checkUuid( array('uuid' =>  $this->session->gorillaUuid) ) )
             {
