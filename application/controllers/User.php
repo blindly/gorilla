@@ -50,7 +50,11 @@ class User extends CI_Controller {
                 'ip_address'    => $this->input->ip_address(),
                 'uuid'          => $this->session->gorillaUuid,
             );
-
+            
+            echo "<pre>";
+            print_r( $this->User_model->checkUuid( $params ) );
+            exit;
+            
             if ( ! $this->User_model->checkUuid( $params ) )
             {
                 redirect('/home');
