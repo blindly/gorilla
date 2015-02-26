@@ -64,6 +64,55 @@ class Expenses extends CI_Controller {
     {
         $this->load->library('parser');
         
+
+        // Initialize grand total for expenses
+        $grandTotal = 0;
+
+        // Get All Mileage Expenses
+        $this->db->where('uuid', $this->session->gorillaUuid);
+        //$this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
+        $this->db->order_by('datestamp', 'desc');
+        $expenses = $this->db->get('expenses');
+
+        if ($expenses->num_rows() > 0 )
+        {
+            $total = 0;
+            foreach ($expenses->result() as $expense)
+            {
+                $total = $total + $expense->amount;
+            }
+
+            $grandTotal = $grandTotal + $total;
+
+            $data = array(
+                'total' => number_format((float)$total, 2, '.', ''),
+                'expenses_listings' => $expenses->result_array()
+            );
+
+            $this->parser->parse('expenses/listing_parser', $data);
+
+
+            $data = array(
+                'grandTotal' => number_format((float)$grandTotal, 2, '.', ''),
+            );
+
+            $this->parser->parse('templates/grand_total', $data);
+        }
+        else
+        {
+            $data = array(
+                'gorillaUuid'   => $this->session->gorillaUuid,
+                'message'      => "No expenses found. You should add some!",
+            );
+
+            $this->load->view('templates/message', $data);
+        }
+    
+    /*
+    public function listing()
+    {
+        $this->load->library('parser');
+        
         // Get all Categories
         $this->db->distinct();
         $this->db->select('category');
@@ -127,5 +176,6 @@ class Expenses extends CI_Controller {
             $this->load->view('templates/message', $data);
         }
     }
+    */
     
 }
