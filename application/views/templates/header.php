@@ -7,14 +7,13 @@
         
         <title>Gorilla - Personal Finance</title>
         
-        <!-- CSS -->
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="/static/external/bootstrap-3.3.2/bootstrap.min.css" rel="stylesheet">
         
-        
-        <!-- CSS Yeti -->
+        <!-- Bootstrap Theme Yeti -->
         <link href="/static/external/bootstrap-themes/bootstrap-yeti.min.css" rel="stylesheet">
         
-        <!-- CSS Jquery UI -->
+        <!-- Jquery UI -->
         <link href="/static/external/jquery-ui-1.11.3.custom/jquery-ui.min.css" rel="stylesheet">
         
         <!-- Custom Fonts -->
