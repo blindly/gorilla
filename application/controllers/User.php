@@ -19,136 +19,47 @@ class User extends CI_Controller {
     
     public function index()
 	{    
-        // Load UUID from Cookie if user has been here before
-        $this->session->gorillaUuid = $this->input->cookie('gorilla_uuid');
-
-        if ( ! $this->session->gorillaUuid )
-        {
-            $this->session->gorillaUuid = uuid_generator();
-            $this->session->username = username_generator();
-        }
-        else
-        {
-            if ( $this->User_model->checkUuid( array('uuid' => $this->session->gorillaUuid  ) ) )
-            {
-                $this->session->username = $this->User_model->getUsername( array('uuid' => $this->session->gorillaUuid) ) ?: $this->session->username = username_generator();
-            }
-            else
-                $this->session->username = username_generator();
-        }
-        
-        $params = array(
-            'ip_address'    => $this->input->ip_address(),
-            'uuid'          => $this->session->gorillaUuid,
-            'username'      => $this->session->username
-        );
-        
-        if ( ! $this->User_model->checkUuid( $params ) )
-        {
-            $this->User_model->register( $params );
-        }
-        else
-        {
-            $this->User_model->checkin( $params );
-        }
-        
-        $cookie = array(
-                'name'   => 'uuid',
-                'value'  => $this->session->gorillaUuid,
-                //'expire' => '86500', /// 24 hours
-                'expire' => '15570000', /// 6 months
-                'domain' => 'gorilla.borke.us',
-                'path'   => '/',
-                'prefix' => 'gorilla_',
-                'secure' => TRUE
-        );
-
-        $this->input->set_cookie($cookie);
-        
-        // Send user to their page
-        redirect('/expenses');
+        show_404();
 	}
     
-    public function uuid($gorillaUuid = null)
+    public function register()
     {
+        $this->session->gorillaUuid = username_generator();
+        
         $params = array(
             'ip_address'    => $this->input->ip_address(),
-            'uuid'          => $gorillaUuid
+            'uuid'          => $this->session->gorillaUuid
         );
         
-        if ( ! $this->User_model->checkUuid( $params ) )
-        {
-            redirect('/user');
-        }
-        else
-        {
-            $this->User_model->checkin( $params );
-            
-            if ( $this->input->cookie('gorilla_uuid') )
-            {
-                delete_cookie('gorilla_uuid');
-            }
-            
-            $this->session->gorillaUuid = $gorillaUuid;
-
-            $cookie = array(
-                    'name'   => 'uuid',
-                    'value'  => $this->session->gorillaUuid,
-                    'expire' => '15570000', /// 6 months
-                    'domain' => 'gorilla.borke.us',
-                    'path'   => '/',
-                    'prefix' => 'gorilla_',
-                    'secure' => TRUE
-            );
-
-            $this->input->set_cookie($cookie);
-            
-            redirect('/expenses');
-        }
+        $this->User_model->register( $params );
+                
+        $this->load->view('user/register', $params);
     }
     
-    public function name($username = null)
+    public function u($uuid = null)
     {
-        $params = array(
-            'ip_address'    => $this->input->ip_address(),
-            'username'      => $username
-        );
-        
-        if ( ! $this->User_model->checkUsername( $params ) )
+        if (! $uuid)
         {
-            redirect('/user');
+            redirect('/home');
         }
         else
         {
-            if ( $this->input->cookie('gorilla_uuid') )
-            {
-                delete_cookie('gorilla_uuid');
-            }
-            
-            $this->session->gorillaUuid = $gorillaUuid;
-            $this->session->username = $this->User_model->getUsername( array('uuid' => $this->session->gorillaUuid) );
+            $this->session->gorillaUuid = $uuid;
             
             $params = array(
                 'ip_address'    => $this->input->ip_address(),
-                'username'      => $this->session->username,
-                'uuid'          => $this->session->gorillaUuid
-            );
-            
-            $this->User_model->checkin( $params );
-            
-            $cookie = array(
-                    'name'   => 'uuid',
-                    'value'  => $this->session->gorillaUuid,
-                    'expire' => '15570000', /// 6 months
-                    'domain' => 'gorilla.borke.us',
-                    'path'   => '/',
-                    'prefix' => 'gorilla_',
-                    'secure' => TRUE
+                'uuid'          => $this->session->gorillaUuid,
             );
 
-            $this->input->set_cookie($cookie);
-            
-            redirect('/expenses');
+            if ( ! $this->User_model->checkUuid( $params ) )
+            {
+                redirect('/home');
+            }
+            else
+            {
+                $this->User_model->checkin( $params );
+                redirect("/expenses/u/" . $this->session->gorillaUuid);
+            }
         }
     }
 }
