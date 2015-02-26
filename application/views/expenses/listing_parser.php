@@ -27,7 +27,7 @@
                     </td>
 
                     <td>
-                        <input name="deletes" id="deletes-{id}" value="{id}" type="checkbox">
+                        <input name="deletes[]" id="deletes-{id}" value="{id}" type="checkbox">
                     </td>
                 </tr>
             {/expenses_listings}
