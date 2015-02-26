@@ -1,4 +1,4 @@
-<form name="deleteForm">
+<form name="deleteForm" id="deleteForm">
     <table class='table table-striped'>
         <tr>
             <th>
