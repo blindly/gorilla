@@ -104,4 +104,18 @@ $( document ).ready( function() {
         $("#msg").text(val + " changed");
     });
     
+    // Checkbox Handler
+    $('#deleteForm tr')
+        .filter(':has(:checkbox:checked)')
+        .addClass('selected')
+        .end()
+        .click(function(event) {
+        $(this).toggleClass('selected');
+        if (event.target.type !== 'checkbox') {
+            $(':checkbox', this).attr('checked', function() {
+                return !this.checked;
+            });
+        }
+    });
+    
 });
