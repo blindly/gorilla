@@ -35,7 +35,7 @@
 
         <tr>
             <td colspan="4" align="right">
-                <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                <button id="removal" name="removal" class="btn btn-danger">Delete</button>
             </td>
         </tr>
 

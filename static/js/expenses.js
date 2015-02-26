@@ -123,7 +123,7 @@ $( document ).ready( function() {
         // Disabled form elements will not be serialized.
         $inputs.prop("disabled", true);
 
-        // Fire off the request to /form.php
+        // Fire off the request to form
         request = $.ajax({
             url: "/expenses/delete",
             type: "post",
