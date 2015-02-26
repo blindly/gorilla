@@ -1,4 +1,4 @@
-<form name="manageExpensesForm" id="manageExpensesForm" method="post" action="/expenses/delete">
+<form name="manageExpensesForm" id="manageExpensesForm">
     <table id="manage" class='table table-striped'>
         <tr>
             <th>
