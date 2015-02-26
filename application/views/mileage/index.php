@@ -105,7 +105,7 @@
           <label class="col-md-4 control-label" for="addition"></label>
           <div class="col-md-8">
             <button id="addition" name="addition" class="btn btn-success">Add</button>
-            <button id="reset" name="reset" class="btn btn-danger" type="reset">Clear</button>
+            <button id="reset" name="reset" class="btn btn-warning" type="reset">Clear</button>
             
           </div>
         </div>
