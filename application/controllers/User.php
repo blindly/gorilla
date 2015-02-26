@@ -34,7 +34,8 @@ class User extends CI_Controller {
         if ( $this->User_model->register( $params ) )
         {
             $data = array(
-                'gorillaUuid' => $this->session->gorillaUuid
+                'gorillaUuid'   => $this->session->gorillaUuid,
+                'controller'    => $this->uri->segment(1)
             );
             
             $this->load->view('templates/header', $data);
