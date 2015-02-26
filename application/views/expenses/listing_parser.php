@@ -4,7 +4,7 @@
             Price
         </th>
         <th>
-            Store / Website
+            Merchant
         </th>
         <th>
             Date

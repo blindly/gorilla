@@ -28,7 +28,7 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="merchant">Store / Website</label>  
+          <label class="col-md-4 control-label" for="merchant">Merchant</label>  
           <div class="col-md-6">
           <input id="merchant" name="merchant" type="text" placeholder="From where?" class="form-control input-md" required="">
 
