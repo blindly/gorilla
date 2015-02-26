@@ -53,12 +53,12 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">What happens if I forget to bookmark my personal link or don't save it?</a>
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">What happens if I forget to bookmark my personal link or don't save it?</a>
                 </h4>
             </div>
-            <div id="collapseEleven" class="panel-collapse collapse">
+            <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
-                    Then you can't access any of the data you already entered. You can register then for a new account and start fresh.
+                    If you lose your link, you won't be able to access your data and will have to register for a new account.
                 </div>
             </div>
         </div>
