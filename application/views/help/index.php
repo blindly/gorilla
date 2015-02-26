@@ -50,6 +50,19 @@
             </div>
         </div>
         
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">What happens if I forget to bookmark my personal link or don't save it?</a>
+                </h4>
+            </div>
+            <div id="collapseEleven" class="panel-collapse collapse">
+                <div class="panel-body">
+                    Then you can't access any of the data you already entered. You can register then for a new account and start fresh.
+                </div>
+            </div>
+        </div>
+        
     </div>
 </div>
 
