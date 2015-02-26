@@ -11,7 +11,6 @@
         <th>
             Date
         </th>
-        <th></th>
     </tr>
     
     {expenses_listings}
@@ -25,14 +24,15 @@
             <td>
                 {datestamp}
             </td>
-            <td>
+            
+            <!--<td>
                 <a href="/expenses/delete/{id}" class="btn btn-danger btn-xs">Delete</a>
-            </td>
+            </td>-->
         </tr>
     {/expenses_listings}
     
     <tr>
-        <td colspan="4" align="center">
+        <td colspan="3" align="center">
             <strong>
                 Total: ${total}
             </strong>
