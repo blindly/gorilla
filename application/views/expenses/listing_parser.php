@@ -13,23 +13,25 @@
         </th>
     </tr>
     
-    {expenses_listings}
-        <tr>
-            <td>
-                ${amount}
-            </td>
-            <td>
-                {merchant}
-            </td>
-            <td>
-                {datestamp}
-            </td>
-            
-            <!--<td>
-                <a href="/expenses/delete/{id}" class="btn btn-danger btn-xs">Delete</a>
-            </td>-->
-        </tr>
-    {/expenses_listings}
+    <form name="deleteForm">
+        {expenses_listings}
+            <tr>
+                <td>
+                    ${amount}
+                </td>
+                <td>
+                    {merchant}
+                </td>
+                <td>
+                    {datestamp}
+                </td>
+
+                <td>
+                    <input name="deletes" id="deletes-{id}" value="{id}" type="checkbox">
+                </td>
+            </tr>
+        {/expenses_listings}
+    </form>
     
     <tr>
         <td colspan="3" align="center">

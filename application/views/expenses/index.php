@@ -54,14 +54,6 @@
 
           </div>
         </div>
-
-        <!-- Button 
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="addition"></label>
-          <div class="col-md-4">
-            <button id="addition" name="addition" class="btn btn-primary">Add Expense</button>
-          </div>
-        </div>-->
                 
         <!-- Multiple Checkboxes -->
         <div class="form-group">
