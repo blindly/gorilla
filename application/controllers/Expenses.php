@@ -24,12 +24,11 @@ class Expenses extends CI_Controller {
     {    
         if ( ! $this->session->username)
         {
-            redirect('/user');
+            redirect('/home');
         }
         
         $data = array(
             'gorillaUuid'   => $this->session->gorillaUuid,
-            'username'      => $this->session->username,
             'controller'    => $this->uri->segment(1)
         );
         

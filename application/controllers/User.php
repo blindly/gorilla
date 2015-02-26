@@ -58,7 +58,7 @@ class User extends CI_Controller {
             else
             {
                 $this->User_model->checkin( $params );
-                redirect("/expenses/u/" . $this->session->gorillaUuid);
+                redirect("/expenses");
             }
         }
     }
