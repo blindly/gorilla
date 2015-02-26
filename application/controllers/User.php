@@ -33,7 +33,9 @@ class User extends CI_Controller {
         
         $this->User_model->register( $params );
                 
+        $this->load->view('templates/header', $params);
         $this->load->view('user/register', $params);
+        $this->load->view('templates/footer', $params);
     }
     
     public function u($uuid = null)
