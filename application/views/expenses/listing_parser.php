@@ -1,5 +1,5 @@
-<form id="deleteForm" name="deleteForm" class="form-horizontal">
-    <table class='table table-striped'>
+
+    <table id="expensesTable" class='table table-striped'>
         <tr>
             <th>
                 Price

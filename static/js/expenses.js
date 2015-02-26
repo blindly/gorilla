@@ -181,6 +181,13 @@ $( document ).ready( function() {
         var val = $("label[for='" + id + "']").text();
         $("#msg").text(val + " changed");
     });
+    
+    $('#expensesTable tr').click(function(event) {
+        $(this).toggleClass('selected');
+        if (event.target.type !== 'checkbox') {
+          $(':checkbox', this).trigger('click');
+        }
+    });
 });
 
 
