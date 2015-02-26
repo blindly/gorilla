@@ -21,9 +21,9 @@ class Mileage extends CI_Controller {
     
     public function index()
     {    
-        if ( ! $this->session->username)
+        if ( ! $this->session->gorillaUuid)
         {
-            redirect('/user');
+            redirect('/home');
         }
         
         $data = array(
