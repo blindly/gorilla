@@ -83,7 +83,7 @@
                                         Click to Proceed
                                     </a>
                                 <?php else: ?>
-                                    <a href="#" class="btn btn-default btn-lg">
+                                    <a href="/user/register" class="btn btn-default btn-lg">
                                         <i class="fa fa-fw"></i> <span class="network-name">Register</span>
                                     </a>
                                 <?php endif; ?>
