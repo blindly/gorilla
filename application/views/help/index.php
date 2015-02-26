@@ -28,10 +28,10 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">What do you do with my expenses data?</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">What do you do with my expenses data?</a>
                 </h4>
             </div>
-            <div id="collapseTen" class="panel-collapse collapse">
+            <div id="collapseTwo" class="panel-collapse collapse">
                 <div class="panel-body">
                     Nothing. We don't use your information or sell it. This is simply for tracking purposes for your own use and records.
                 </div>
@@ -40,10 +40,10 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">I have an idea for the site.</a>
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">I have an idea for the site.</a>
                 </h4>
             </div>
-            <div id="collapseEleven" class="panel-collapse collapse">
+            <div id="collapseThree" class="panel-collapse collapse">
                 <div class="panel-body">
                     Great! We have a <a href="https://github.com/blindly/gorilla">GitHub</a> repository. Feel free to create an issue or pull request.
                 </div>
@@ -53,10 +53,10 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">What happens if I forget to bookmark my personal link or don't save it?</a>
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">What happens if I forget to bookmark my personal link or don't save it?</a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <div id="collapseFour" class="panel-collapse collapse in">
                 <div class="panel-body">
                     If you lose your link, you won't be able to access your data and will have to register for a new account.
                 </div>
