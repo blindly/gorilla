@@ -38,9 +38,9 @@ class User extends CI_Controller {
         $this->load->view('templates/footer', $params);
     }
     
-    public function u($uuid = null)
+    public function u($gorillaUuid = null)
     {
-        if (! $uuid)
+        if (! $gorillaUuid)
         {
             redirect('/home');
         }
