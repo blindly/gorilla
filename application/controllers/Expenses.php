@@ -45,10 +45,12 @@ class Expenses extends CI_Controller {
     }
     
     public function add()
-    {        
+    {
+        setlocale(LC_MONETARY,"en_US");
+        
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
-            'amount'        => money_format( (float)$this->input->post('amount')),
+            'amount'        => money_format( $this->input->post('amount') ),
             'category'      => ucfirst( $this->input->post('category') ),
             'merchant'      => ucfirst( $this->input->post('merchant') ),
             'location'      => ucfirst( $this->input->post('location') ),
