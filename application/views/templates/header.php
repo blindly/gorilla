@@ -55,6 +55,8 @@
                     <?php if ( $gorillaUuid ) : ?>
                         <li><a href="/expenses">Expenses</a></li>
                         <li><a href="/mileage">Mileage</a></li>
+                        <li><a href="/user/u/<?= $gorillaUuid ?>">Personal Link</a></li>
+
                     <?php endif; ?>
                   <li><a href="/help">Help</a></li>
                 </ul>
