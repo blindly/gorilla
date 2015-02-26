@@ -13,11 +13,7 @@ class Home extends CI_Controller {
     }
     
 	public function index()
-	{
-        echo "<pre>";
-            print_r($_SESSION);
-        echo "</pre>";
-        
+	{    
         if ($this->session->gorillaUuid)
         {
             if ( ! $this->User_model->checkUuid( array('uuid' =>  $this->session->gorillaUuid) ) )
