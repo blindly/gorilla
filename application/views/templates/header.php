@@ -21,8 +21,6 @@
         <link href="/static/external/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         -->
-        <!-- Custom CSS -->
-        <link href="/static/css/landing-page.css" rel="stylesheet">
         
         <!-- Custom styles for this template -->
         <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
