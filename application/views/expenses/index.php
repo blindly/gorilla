@@ -69,11 +69,11 @@
                 
         <!-- Multiple Checkboxes -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="checkboxes">Deductable</label>
+          <label class="col-md-4 control-label" for="deductible">Deductible</label>
           <div class="col-md-4">
           <div class="checkbox">
             <label for="checkboxes-0">
-              <input type="checkbox" name="deductable" id="deductable-0" value="1">
+              <input type="checkbox" name="deductible" id="deductible-0" value="1">
               Yes
             </label>
             </div>

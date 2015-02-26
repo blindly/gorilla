@@ -54,7 +54,7 @@ class Expenses extends CI_Controller {
             'location'      => ucfirst( $this->input->post('location') ),
             'description'   => ucfirst( $this->input->post('description') ),
             'datestamp'     => $this->input->post('datestamp'),
-            'deductable'    => $this->input->post('deductable'),
+            'deductible'    => $this->input->post('deductible'),
         );
         
         echo $this->Expenses_model->add($data);

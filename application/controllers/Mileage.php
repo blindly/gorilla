@@ -58,7 +58,7 @@ class Mileage extends CI_Controller {
             'merchant'      => ucfirst( $this->input->post('merchant') ),
             'location'      => ucfirst( $this->input->post('location') ),
             'datestamp'     => $this->input->post('datestamp'),
-            'deductable'    => $this->input->post('deductable'),
+            'deductible'    => $this->input->post('deductible'),
         );
         
         /*
