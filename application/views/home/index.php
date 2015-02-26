@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Gorilla - Personal Finance Tracker</title>
+    <title>Gorilla - Personal Finance</title>
 
     <!-- Bootstrap -->
     <link href="/static/external/bootstrap-3.3.2/bootstrap.min.css" rel="stylesheet">
@@ -43,20 +43,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" href="#">Start Bootstrap</a>
+                <a class="navbar-brand topnav" href="#">Gorilla</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+                    <li><a href="/home">Home</a></li>
+                    <?php if ( $gorillaUuid ) : ?>
+                        <li><a href="/expenses">Expenses</a></li>
+                        <li><a href="/mileage">Mileage</a></li>
+                        <li><a href="/user/u/<?= $gorillaUuid ?>">Personal Link</a></li>
+                    <?php else: ?>
+                        <li><a href="/user/register">Register</a></li>
+                    <?php endif; ?>
+                  <li><a href="/help">Help</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -77,13 +77,19 @@
                         <hr class="intro-divider">
                         <ul class="list-inline intro-social-buttons">
                             <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                                <?php if ( $gorillaUuid ) : ?>
+                                
+                                    Registered! <a href="/user/u/<?= $gorillaUuid ?>">
+                                        Click to Proceed
+                                    </a>
+                                <?php else: ?>
+                                    <a href="#" class="btn btn-default btn-lg">
+                                        <i class="fa fa-fw"></i> <span class="network-name">Register</span>
+                                    </a>
+                                <?php endif; ?>
                             </li>
                             <li>
-                                <a href="https://github.com/blindly/gorilla" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                                <a href="https://github.com/blindly/gorilla" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">View us on Github</span></a>
                             </li>
                         </ul>
                     </div>
