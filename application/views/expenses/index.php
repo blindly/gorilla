@@ -1,5 +1,6 @@
 <div class="container-fluid">
     <div class="col-xs-12 col-sm-6 col-lg-6" id="left-side">
+        
         <form id="expenseForm" name="expenseForm" class="form-horizontal">
             <fieldset>
                 <!-- Form Name -->
@@ -17,13 +18,13 @@
 
                 </div>
 
-                <!-- Text input-->
+                <!-- Text input
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="category">Category</label>  
                     <div class="col-md-6">
                         <input id="category" name="category" type="text" placeholder="Categorize it!" class="form-control input-md" required="">
                     </div>
-                </div>
+                </div>-->
 
                 <!-- Text input-->
                 <div class="form-group">
@@ -33,17 +34,6 @@
 
                   </div>
                 </div>
-
-                <!-- Text input-->
-                <!--
-                <div class="form-group">
-                  <label class="col-md-4 control-label" for="location">City</label>  
-                  <div class="col-md-6">
-                  <input id="location" name="location" type="text" placeholder="What area?" class="form-control input-md" required="">
-
-                  </div>
-                </div>
-                -->
 
                 <!-- Text input-->
                 <div class="form-group">
