@@ -31,7 +31,7 @@
             <script src="/static/js/<?= strtolower( $controller ) ?>.js"></script>
         <?php endif; ?>
 
-        <!--Load Script and Stylesheet datePicker -->
+        <!--Load Stylesheet datePicker -->
         <link type="text/css" href="/static/css/date-picker.css" rel="stylesheet" />
     </body>
 <html>
