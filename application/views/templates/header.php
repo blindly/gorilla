@@ -11,7 +11,7 @@
         <link href="/static/external/bootstrap-3.3.2/bootstrap.min.css" rel="stylesheet">
         
         <!-- Bootstrap Theme Yeti -->
-        <link href="/static/external/bootstrap-themes/bootstrap-yeti.min.css" rel="stylesheet">
+        <!-- <link href="/static/external/bootstrap-themes/bootstrap-yeti.min.css" rel="stylesheet"> -->
         
         <!-- Jquery UI -->
         <link href="/static/external/jquery-ui-1.11.3.custom/jquery-ui.min.css" rel="stylesheet">
