@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container-fluid">
     
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-6 col-lg-6" id="left-side">
         
         <form id="mileageForm" name="mileageForm" class="form-horizontal">
             <fieldset>
@@ -115,7 +115,7 @@
             
     </div>
     
-    <div class="col-xs-6">
+    <div class="col-xs-12 col-sm-6 col-lg-6" id="right-side"> 
         <!-- Alerts -->
         <div id="successbox" class="alert alert-success alert-dismissible" role="alert" style="display: none">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
