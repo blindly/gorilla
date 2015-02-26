@@ -5,7 +5,7 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
-        $params = array('gorillaUuid' => null)
+        $params = array('gorillaUuid' => $this->session->gorillaUuid);
             
         $this->load->view('templates/header', $params);
 		$this->load->view('home/index', $params);
