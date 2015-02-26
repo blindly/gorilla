@@ -17,6 +17,7 @@ class Mileage extends CI_Controller {
         
         // Load Models
         $this->load->model('Mileage_model');
+        $this->load->model('User_model');
     }
     
     public function index()
