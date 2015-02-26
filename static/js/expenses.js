@@ -105,7 +105,7 @@ $( document ).ready( function() {
     });
     
     // Checkbox Handler
-    $('#deleteForm tr')
+    $('#manage tr')
         .filter(':has(:checkbox:checked)')
         .addClass('selected')
         .end()
