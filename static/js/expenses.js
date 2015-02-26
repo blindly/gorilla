@@ -3,7 +3,6 @@ $( document ).ready( function() {
     // Variable to hold request
     var request;
 
-    /*
     // Bind to the submit event of our form
     $("#expenseForm").submit(function(event){
 
@@ -83,7 +82,6 @@ $( document ).ready( function() {
         }); 
         
     });
-    */
     
     // Bind to the submit event of our form
     $("#deleteForm").submit(function(event){
@@ -164,7 +162,6 @@ $( document ).ready( function() {
         }); 
         
     });
-    
     
     // Refresh list of expenses
     $.ajax({

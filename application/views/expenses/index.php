@@ -93,7 +93,11 @@
                 </h3>
             </div>
             <div class="panel-body"></div>
-            <div id="expenseListing"></div>
+            
+            <form id="deleteForm" name="deleteForm">
+                <div id="expenseListing">
+                </div>
+            </form>
         </div>
         
     </div>
