@@ -123,6 +123,17 @@ $( document ).ready( function() {
                 $('#successbox').delay( 2000 ).hide( "drop", { direction: "right" }, "slow" );
             }, 3000);
             
+            setTimeout(function(){ 
+                // Load List of Expenses
+                $.ajax({
+                      url:"/expenses/listing",
+                      cache:0,
+                      success:function(result){
+                             document.getElementById("expenseListing").innerHTML=result;
+                       }
+                });
+            }, 3000);
+            
         });
 
         // Callback handler that will be called on failure
@@ -150,16 +161,7 @@ $( document ).ready( function() {
         });
 
         // Prevent default posting of form
-        event.preventDefault();
-        
-        // Load List of Expenses
-        $.ajax({
-              url:"/expenses/listing",
-              cache:0,
-              success:function(result){
-                     document.getElementById("expenseListing").innerHTML=result;
-               }
-        }); 
+        event.preventDefault(); 
         
     });
     
