@@ -35,8 +35,6 @@
         <tr>
             <td colspan="4" align="right">
                 <button id="removal" name="removal" class="btn btn-danger" type>Delete</button>
-                
-                <button id="addition" name="addition" class="btn btn-success">Delete</button>
             </td>
         </tr>
 
