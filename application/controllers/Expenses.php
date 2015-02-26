@@ -48,7 +48,7 @@ class Expenses extends CI_Controller {
     {        
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
-            'amount'        => number_format((float)$this->input->post('amount'), 2, '.', ''),
+            'amount'        => money_format( (float)$this->input->post('amount')),
             'category'      => ucfirst( $this->input->post('category') ),
             'merchant'      => ucfirst( $this->input->post('merchant') ),
             'location'      => ucfirst( $this->input->post('location') ),
