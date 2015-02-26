@@ -60,6 +60,13 @@ class Expenses extends CI_Controller {
         echo $this->Expenses_model->add($data);
     }
     
+    public function delete()
+    {
+        echo "<pre>";
+        print_r($_POST);
+        echo "</pre>";
+    }
+    
     public function listing()
     {
         $this->load->library('parser');
