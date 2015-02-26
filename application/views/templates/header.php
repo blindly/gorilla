@@ -18,11 +18,13 @@
         <link href="/static/external/jquery-ui-1.11.3.custom/jquery-ui.min.css" rel="stylesheet">
         
         <!-- Custom Fonts -->
-        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/static/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
         
+        <!-- Custom CSS -->
+        <link href="/static/css/landing-page.css" rel="stylesheet">
+        
         <!-- Custom styles for this template -->
-        <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
         <link href="/static/css/style.css" rel="stylesheet">
         
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
