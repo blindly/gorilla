@@ -8,7 +8,7 @@ class Help extends CI_Controller {
         $params = array('gorillaUuid' => $this->session->gorillaUuid);
             
         $this->load->view('templates/header', $params);
-		$this->load->view('help/index');
+		$this->load->view('help/index', $params);
         $this->load->view('templates/footer', $params);
 	}
 }
