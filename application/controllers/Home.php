@@ -27,8 +27,6 @@ class Home extends CI_Controller {
             'controller'    => $this->uri->segment(1)
         );
             
-        $this->load->view('templates/header', $data);
 		$this->load->view('home/index', $data);
-        $this->load->view('templates/header', $data);
 	}
 }
