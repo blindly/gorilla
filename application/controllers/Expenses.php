@@ -107,6 +107,7 @@ class Expenses extends CI_Controller {
 
             $this->load->view('templates/message', $data);
         }
+    }
     
     /*
     public function listing()
