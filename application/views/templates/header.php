@@ -38,7 +38,7 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                     <li><a href="/home">Home</a></li>
-                    <?php if ( $uuid ) : ?>
+                    <?php if ( $gorillaUuid ) : ?>
                         <li><a href="/expenses">Expenses</a></li>
                         <li><a href="/mileage">Mileage</a></li>
                     <?php endif; ?>
