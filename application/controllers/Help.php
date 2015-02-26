@@ -5,8 +5,10 @@ class Help extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->view('templates/header', $params = array());
+        $params = array('gorillaUuid' => $this->session->gorillaUuid);
+            
+        $this->load->view('templates/header', $params);
 		$this->load->view('help/index');
-        $this->load->view('templates/footer', $params = array());
+        $this->load->view('templates/footer', $params);
 	}
 }

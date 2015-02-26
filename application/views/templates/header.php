@@ -25,7 +25,6 @@
         <link href="/static/css/landing-page.css" rel="stylesheet">
         
         <!-- Custom styles for this template -->
-        <link href="/static/css/navbar-fixed-top.css" rel="stylesheet">
         <link href="/static/css/style.css" rel="stylesheet">
         
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
