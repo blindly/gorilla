@@ -1,15 +1,3 @@
-
-        <center><em>&copy; Borke.US 2015</em></center>
-
-        <div id="debug" class="well text-center">
-            <p>Debug</p>
-            <p>
-                Uuid: <?= $gorillaUuid ?><br>
-                Link: <a href="/user/u/<?= $gorillaUuid ?>">Pesonal Link</a><br>
-
-            </p>
-        </div>
-
         <!-- Footer -->
         <footer>
             <div class="container">
@@ -20,10 +8,11 @@
                             <?php if ( $gorillaUuid ) : ?>
                                 <li><a href="/expenses">Expenses</a></li>
                                 <li><a href="/mileage">Mileage</a></li>
+                                <li><a href="/user/u/<?= $gorillaUuid ?>">Personal Link</a></li>
                             <?php endif; ?>
                           <li><a href="/help">Help</a></li>
                         </ul>
-                        <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
+                        <p class="copyright text-muted small">Copyright &copy; Borke.US 2014. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
