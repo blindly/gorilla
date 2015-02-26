@@ -16,9 +16,9 @@ class User_model extends CI_Model {
         $this->db->insert('users', $params);
         
         if ( $this->db->affected_rows() > 0 ) 
-            $this->output->set_status_header('200');
+            return true;
         else
-            $this->output->set_status_header('400');
+            return false;
     }
     
     public function checkin($params = array())
@@ -27,9 +27,9 @@ class User_model extends CI_Model {
         $this->db->update('users', $params);
         
         if ( $this->db->affected_rows() > 0 ) 
-            $this->output->set_status_header('200');
+            return true;
         else
-            $this->output->set_status_header('400');
+            return false;
     }
     
     public function checkUuid($params = array())
@@ -38,35 +38,8 @@ class User_model extends CI_Model {
         $valid = $this->db->get('users');
         
         if ( $valid->num_rows() > 0 )
-        {
             return true;
-        }
-    }
-    
-    public function checkUsername($params = array())
-    {        
-        $this->db->where('username', $params['username']);
-        $valid = $this->db->get('users');
-        
-        if ( $valid->num_rows() > 0 ) 
-            return $valid->result()->uuid;
-    }
-    
-    public function getUsername($params = array())
-    {        
-        $this->db->where('uuid', $params['uuid']);
-        $rows = $this->db->get('users');
-        
-        if ( $rows->num_rows() > 0 ) 
-        {
-            foreach ($rows->result() as $row)
-            {
-                $username = $row->username;
-                if ( $username )
-                    return $username;
-                else
-                    return false;
-            }
-        }
+        else
+            return false;
     }
 }
