@@ -23,9 +23,9 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="/static/external/jquery-ui-1.11.3.custom/jquery-ui.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="/static/external/jquery/jquery.js"></script>
+        <script src="/static/external/jquery-ui-1.11.3.custom/jquery-ui.min.js"></script>
+        <script src="/static/external/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
 
         <!-- Custom Scripts -->
         <?php $validScripts = array('expenses', 'mileage'); ?>
