@@ -26,6 +26,13 @@ class Expenses extends CI_Controller {
         {
             redirect('/home');
         }
+        else
+        {
+            if ( ! $this->User_model->checkUuid( array('uuid' =>  $this->session->gorillaUuid) ) )
+            {
+                redirect('/home');
+            }
+        }
         
         $data = array(
             'gorillaUuid'   => $this->session->gorillaUuid,
