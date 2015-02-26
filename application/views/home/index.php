@@ -78,8 +78,8 @@
                         <ul class="list-inline intro-social-buttons">
                             <li>
                                 <?php if ( $gorillaUuid ) : ?>
-                                    Registered! <a href="/user/u/<?= $gorillaUuid ?>" class="btn btn-default btn-lg">
-                                        Click to Proceed
+                                    <a href="/user/u/<?= $gorillaUuid ?>" class="btn btn-default btn-lg">
+                                        Registered! Click to Proceed
                                     </a>
                                 <?php else: ?>
                                     <a href="/user/register" class="btn btn-default btn-lg">
