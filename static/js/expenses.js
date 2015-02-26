@@ -56,6 +56,15 @@ $( document ).ready( function() {
             $('#failbox').html('<p>Error adding expenses :(</p>');
             $('#failbox').css('display','block');
             
+            // Load List of Expenses
+            $.ajax({
+                  url:"/expenses/listing",
+                  cache:0,
+                  success:function(result){
+                         document.getElementById("expenseListing").innerHTML=result;
+                   }
+            });
+            
             setTimeout(function(){ 
                 $('#failbox').delay( 2000 ).hide( "drop", { direction: "right" }, "slow" );
             }, 3000);
@@ -71,16 +80,6 @@ $( document ).ready( function() {
 
         // Prevent default posting of form
         event.preventDefault();
-        
-        // Load List of Expenses
-        $.ajax({
-              url:"/expenses/listing",
-              cache:0,
-              success:function(result){
-                     document.getElementById("expenseListing").innerHTML=result;
-               }
-        }); 
-        
     });
     
     // Bind to the submit event of our form
@@ -118,22 +117,19 @@ $( document ).ready( function() {
                         
             $('#successbox').html('<p>Expense removed successfully :)</p>');
             $('#successbox').css('display','block');
+            
+            // Load List of Expenses
+            $.ajax({
+                  url:"/expenses/listing",
+                  cache:0,
+                  success:function(result){
+                         document.getElementById("expenseListing").innerHTML=result;
+                   }
+            });
 
             setTimeout(function(){ 
                 $('#successbox').delay( 2000 ).hide( "drop", { direction: "right" }, "slow" );
             }, 3000);
-            
-            setTimeout(function(){ 
-                // Load List of Expenses
-                $.ajax({
-                      url:"/expenses/listing",
-                      cache:0,
-                      success:function(result){
-                             document.getElementById("expenseListing").innerHTML=result;
-                       }
-                });
-            }, 3000);
-            
         });
 
         // Callback handler that will be called on failure
