@@ -1,7 +1,8 @@
 <div class="container">
     
-    <!-- <div class="col-xs-6 col-lg-4" id="left-side"> -->
-    <div class="col-xs-12 col-sm-6 col-lg-7" id="left-side">
+    <!-- <div class="col-xs-6 col-lg-4" id="left-side">
+    <div class="col-xs-12 col-sm-6 col-lg-7" id="left-side"> -->
+    <div class="col-xs-6">
         
         <form id="expenseForm" name="expenseForm" class="form-horizontal">
             <fieldset>
@@ -94,8 +95,9 @@
             
     </div>
     
-    <!-- <div class="col-xs-12 col-sm-6 col-lg-8" id="right-side"> -->
-    <div class="col-xs-12 col-sm-6 col-lg-7" id="right-side">
+    <!-- <div class="col-xs-12 col-sm-6 col-lg-8" id="right-side"> 
+    <div class="col-xs-12 col-sm-6 col-lg-7" id="right-side">-->
+    <div class="col-xs-6">
 
         <!-- Alerts -->
         <div id="successbox" class="alert alert-success alert-dismissible" role="alert" style="display: none">
