@@ -26,7 +26,7 @@
                 {datestamp}
             </td>
             <td>
-                <a href="/expenses/delete/{id}" class="btn btn-danger btn-mini">Delete</a>
+                <a href="/expenses/delete/{id}" class="btn btn-danger btn-xs">Delete</a>
             </td>
         </tr>
     {/expenses_listings}
