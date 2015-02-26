@@ -1,5 +1,3 @@
-<h3 class="text-center">{category}</h3>
-
 <table class='table table-striped'>
     <tr>
         <th>
