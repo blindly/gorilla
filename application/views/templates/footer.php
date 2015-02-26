@@ -4,7 +4,7 @@
             <p>Debug</p>
             <p>
                 Uuid: <?= $gorillaUuid ?><br>
-                Link: <a href="/user/uuid/<?= $gorillaUuid ?>">Pesonal Link</a><br>
+                Link: <a href="/user/u/<?= $gorillaUuid ?>">Pesonal Link</a><br>
 
             </p>
         </div>
