@@ -38,11 +38,10 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                     <li><a href="/home">Home</a></li>
-                    <li><a href="/mileage">Mileage</a></li>
-                <?php if ( $gorillaUuid ) : ?>
-                    <li><a href="/expenses">Expenses</a></li>
-                    <li><a href="/mileage">Mileage</a></li>
-                <?php endif; ?>
+                    <?php if ( $gorillaUuid ) : ?>
+                        <li><a href="/expenses">Expenses</a></li>
+                        <li><a href="/mileage">Mileage</a></li>
+                    <?php endif; ?>
                   <li><a href="/help">Help</a></li>
             <!--
                 <li><a href="#reports">Reports</a></li>
