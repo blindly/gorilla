@@ -3,10 +3,8 @@
         <div id="debug" class="well text-center">
             <p>Debug</p>
             <p>
-                User: <?= $username ?><br>
                 Uuid: <?= $gorillaUuid ?><br>
-                Link: <a href="/user/name/<?= $username ?>">Remote Access Link</a><br>
-                Link: <a href="/user/uuid/<?= $gorillaUuid ?>">Remote Access Link</a><br>
+                Link: <a href="/user/uuid/<?= $gorillaUuid ?>">Pesonal Link</a><br>
 
             </p>
         </div>

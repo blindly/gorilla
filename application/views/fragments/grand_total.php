@@ -1,1 +1,0 @@
-<h3 class="text-center">Total Spent: ${grandTotal}</h3>
