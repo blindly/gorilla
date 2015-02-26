@@ -18,9 +18,10 @@
         <link href="/static/external/jquery-ui-1.11.3.custom/jquery-ui.min.css" rel="stylesheet">
         
         <!-- Custom Fonts -->
+        <!--
         <link href="/static/external/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-        
+        -->
         <!-- Custom CSS -->
         <link href="/static/css/landing-page.css" rel="stylesheet">
         
