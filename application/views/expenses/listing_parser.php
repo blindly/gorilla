@@ -5,6 +5,7 @@
         <th>Price</th>
         <th>Store / Website</th>
         <th>Date</th>
+        <th></th>
     </tr>
     
     {expenses_listings}
@@ -12,6 +13,7 @@
             <td>${amount}</td>
             <td>{merchant}</td>
             <td>{datestamp}</td>
+            <td>{id}</td>
         </tr>
     {/expenses_listings}
     
