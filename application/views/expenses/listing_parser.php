@@ -11,6 +11,7 @@
         <th>
             Date
         </th>
+        <th></th>
     </tr>
     
     <form name="deleteForm">
@@ -34,7 +35,13 @@
     </form>
     
     <tr>
-        <td colspan="3" align="center">
+        <td colspan="4" align="right">
+            <button class="btn btn-danger">Delete</button>
+        </td>
+    </tr>
+    
+    <tr>
+        <td colspan="4" align="center">
             <strong>
                 Total: ${total}
             </strong>
