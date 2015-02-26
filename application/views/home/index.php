@@ -83,7 +83,7 @@
                                     </a>
                                 <?php else: ?>
                                     <a href="/user/register" class="btn btn-default btn-lg">
-                                        <i class="fa fa-fw"></i> <span class="network-name">Register</span>
+                                        <span class="network-name">Register</span>
                                     </a>
                                 <?php endif; ?>
                             </li>
