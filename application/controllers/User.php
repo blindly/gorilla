@@ -55,7 +55,7 @@ class User extends CI_Controller {
         }
         else
         {
-            $this->session->gorillaUuid = $uuid;
+            $this->session->gorillaUuid = $gorillaUuid;
             
             $params = array(
                 'ip_address'    => $this->input->ip_address(),
