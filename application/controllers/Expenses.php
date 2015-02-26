@@ -62,9 +62,12 @@ class Expenses extends CI_Controller {
     
     public function delete()
     {
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
+        $data = array(
+            'uuid'          => $this->session->gorillaUuid,
+            'deletes' => $this->input->post('deletes'),
+        );
+        
+        echo $this->Expenses_model->delete($data);
     }
     
     public function listing()

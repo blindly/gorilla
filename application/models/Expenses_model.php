@@ -21,4 +21,18 @@ class Expenses_model extends CI_Model {
         else
             echo "error";
     }
+
+    public function delete($params = array())
+    {
+        foreach ($params['deletes'] as $id)
+        {
+            $data = array(
+                'uuid' => $params['uuid'],
+                'id'   => $id,
+            );
+            
+            $this->db->delete('expenses', $data);
+        }
+    }
+
 }
