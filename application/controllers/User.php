@@ -31,11 +31,20 @@ class User extends CI_Controller {
             'uuid'          => $this->session->gorillaUuid
         );
         
-        $this->User_model->register( $params );
-                
-        $this->load->view('templates/header', $params);
-        $this->load->view('user/register', $params);
-        $this->load->view('templates/footer', $params);
+        if ( $this->User_model->register( $params ) )
+        {
+            $data = array(
+                'gorillaUuid' => $this->session->gorillaUuid
+            );
+            
+            $this->load->view('templates/header', $data);
+            $this->load->view('user/register', $data);
+            $this->load->view('templates/footer', $data);
+        }
+        else
+        {
+            echo "registration error. this shouldn't happen";
+        }
     }
     
     public function u($gorillaUuid = null)
