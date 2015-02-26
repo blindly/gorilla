@@ -14,7 +14,7 @@ $( document ).ready( function() {
         var $form = $(this);
 
         // Let's select and cache all the fields
-        var $inputs = $form.find("input, select, button, textarea");
+        var $inputs = $form.find("input, select, button, checkbox, textarea");
 
         // Serialize the data in the form
         var serializedData = $form.serialize();
@@ -35,9 +35,7 @@ $( document ).ready( function() {
         request.done(function (response, textStatus, jqXHR){
             // Log a message to the console
             console.log("Hooray, it added!");
-            
-            setTimeout(function(){ jQuery("#div").hide(); }, 3000);
-            
+                        
             $('#successbox').html('<p>Expense added successfully :)</p>');
             $('#successbox').css('display','block');
 
@@ -84,15 +82,6 @@ $( document ).ready( function() {
         }); 
         
     });
-        
-    // Refresh list of expenses
-    $.ajax({
-          url:"/expenses/listing",
-          cache:0,
-          success:function(result){
-                 document.getElementById("expenseListing").innerHTML=result;
-           }
-    });
 
 });
 
@@ -124,7 +113,7 @@ $( document ).ready( function() {
         var $form = $(this);
 
         // Let's select and cache all the fields
-        var $inputs = $form.find("input, select, button, textarea");
+        var $inputs = $form.find("input, select, checkbox, button, textarea");
 
         // Serialize the data in the form
         var serializedData = $form.serialize();
@@ -145,9 +134,7 @@ $( document ).ready( function() {
         request.done(function (response, textStatus, jqXHR){
             // Log a message to the console
             console.log("Hooray, it deleted!");
-            
-            setTimeout(function(){ jQuery("#div").hide(); }, 3000);
-            
+                        
             $('#successbox').html('<p>Expense removed successfully :)</p>');
             $('#successbox').css('display','block');
 
@@ -194,7 +181,10 @@ $( document ).ready( function() {
         }); 
         
     });
-        
+
+});
+
+$(document).ready(function() {
     // Refresh list of expenses
     $.ajax({
           url:"/expenses/listing",
@@ -203,5 +193,4 @@ $( document ).ready( function() {
                  document.getElementById("expenseListing").innerHTML=result;
            }
     });
-
 });
