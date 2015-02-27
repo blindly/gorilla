@@ -85,7 +85,7 @@ class Bills extends CI_Controller {
         if ($expenses->num_rows() > 0 )
         {
             $total = 0;
-            foreach (bills->result() as $bill)
+            foreach ($bills->result() as $bill)
             {
                 $total = $total + $bill->amount;
             }
