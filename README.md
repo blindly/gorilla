@@ -19,7 +19,7 @@ PHP based finance tracker
 - Gorilla will have a reports section
 
 ## Milestones
-- [x] : Username and UUID assigned on first visit
+- [x] : <s>Username and UUID assigned on first visit</s> UUID assigned on registration
 - [ ] : Option to upload reciepts
 - [ ] : Tax Deductible
 - [x] : Categories
