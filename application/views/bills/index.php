@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="col-xs-12 col-sm-6 col-lg-6" id="left-side">
         
-    <form class="form-horizontal">
+    <form class="form-horizontal" id="billsForm" name="billsForm">
         <fieldset>
 
         <!-- Form Name -->
