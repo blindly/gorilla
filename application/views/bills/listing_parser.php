@@ -8,7 +8,7 @@
                 Company
             </th>
             <th>
-                Due
+                Monthly Due Date
             </th>
             <th></th>
         </tr>
