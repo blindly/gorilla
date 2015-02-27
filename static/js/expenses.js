@@ -39,6 +39,15 @@ $( document ).ready( function() {
             $('#successbox').html('<p>Expense added successfully :)</p>');
             $('#successbox').css('display','block');
 
+            // Load List of Expenses
+            $.ajax({
+                  url:"/expenses/listing",
+                  cache:0,
+                  success:function(result){
+                         document.getElementById("expenseListing").innerHTML=result;
+                   }
+            });
+            
             setTimeout(function(){ 
                 $('#successbox').delay( 2000 ).hide( "drop", { direction: "right" }, "slow" );
             }, 3000);
