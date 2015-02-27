@@ -63,15 +63,12 @@ class User extends CI_Controller {
                 'uuid'          => $this->session->gorillaUuid,
             );
             
-            if ( ! $this->User_model->checkUuid( $params ) )
-            {
-                redirect('/home');
-            }
-            else
+            if ( $this->User_model->checkUuid( $params ) )
             {
                 $this->User_model->checkin( $params );
-                redirect("/expenses");
             }
+            
+            redirect("/home");
         }
     }
 }
