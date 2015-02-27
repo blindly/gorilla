@@ -11,9 +11,12 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="amount">Amount</label>  
           <div class="col-md-6">
-          <input id="amount" name="amount" type="text" placeholder="Monthly recurring amount" class="form-control input-md" required="">
-
+            <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input id="amount" name="amount" type="text" placeholder="Monthly recurring amount" class="form-control input-md" required="">
+            </div>
           </div>
+
         </div>
 
         <!-- Text input-->
