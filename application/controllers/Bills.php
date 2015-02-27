@@ -52,7 +52,7 @@ class Bills extends CI_Controller {
             'uuid'          => $this->session->gorillaUuid,
             'amount'        => number_format( (float) $this->input->post('amount'), 2, '.', ',' ),
             'company'       => ucfirst( $this->input->post('company') ),
-            'dueDate'     => $this->input->post('dueDate'),
+            'dueDate'      => 1//$this->input->post('dueDate'),
         );
         
         echo $this->Bills_model->add($data);
