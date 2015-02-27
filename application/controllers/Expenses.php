@@ -122,6 +122,7 @@ class Expenses extends CI_Controller {
     }
     
     /*
+    | Listing with categories
     public function listing()
     {
         $this->load->library('parser');
