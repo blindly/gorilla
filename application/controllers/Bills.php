@@ -82,7 +82,7 @@ class Bills extends CI_Controller {
         $this->db->order_by('dueDate', 'desc');
         $bills = $this->db->get('bills');
 
-        if ($expenses->num_rows() > 0 )
+        if ($bills->num_rows() > 0 )
         {
             $total = 0;
             foreach ($bills->result() as $bill)
