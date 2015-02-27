@@ -48,7 +48,7 @@
           <label class="col-md-4 control-label" for="button1id">Add</label>
           <div class="col-md-8">
             <button id="add" name="add" class="btn btn-success">Add</button>
-            <button id="clear" name="clear" class="btn btn-warning">Clear</button>
+            <button id="clear" type="reset" name="clear" class="btn btn-warning">Clear</button>
           </div>
         </div>
 
