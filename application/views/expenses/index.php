@@ -18,13 +18,13 @@
 
                 </div>
 
-                <!-- Text input
+                Text input
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="category">Category</label>  
                     <div class="col-md-6">
-                        <input id="category" name="category" type="text" placeholder="Categorize it!" class="form-control input-md" required="">
+                        <input id="category" name="category" type="text" placeholder="Category Optional" class="form-control input-md">
                     </div>
-                </div>-->
+                </div>
 
                 <!-- Text input-->
                 <div class="form-group">
