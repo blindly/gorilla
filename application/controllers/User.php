@@ -66,6 +66,7 @@ class User extends CI_Controller {
             if ( $this->User_model->checkUuid( $params ) )
             {
                 $this->User_model->checkin( $params );
+                redirect("/expenses");
             }
             
             redirect("/home");
