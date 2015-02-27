@@ -22,7 +22,7 @@ PHP based finance tracker
 - [x] : UUID assigned on registration
 - [ ] : Option to upload reciepts
 - [ ] : Tax Deductible
-- [x] : Categories
+- [ ] : Categories (removed, considering)
 - [ ] : Reports
 - [x] : Expenses input
 - [x] : Mileage input
