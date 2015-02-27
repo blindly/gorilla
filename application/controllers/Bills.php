@@ -110,7 +110,7 @@ class Bills extends CI_Controller {
         {
             $data = array(
                 'gorillaUuid'   => $this->session->gorillaUuid,
-                'message'      => "No expenses found. You should add some!",
+                'message'      => "No bills found. You should add some!",
             );
 
             $this->load->view('templates/message', $data);
