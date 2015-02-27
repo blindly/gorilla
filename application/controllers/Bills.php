@@ -16,7 +16,7 @@ class Bills extends CI_Controller {
         $this->load->database();
         
         // Load Models
-        //$this->load->model('Expenses_model');
+        $this->load->model('Bills_model');
         $this->load->model('User_model');
     }
     
@@ -51,15 +51,11 @@ class Bills extends CI_Controller {
         $data = array(
             'uuid'          => $this->session->gorillaUuid,
             'amount'        => number_format( (float) $this->input->post('amount'), 2, '.', ',' ),
-            'category'      => ucfirst( $this->input->post('category') ),
-            'merchant'      => ucfirst( $this->input->post('merchant') ),
-            'location'      => ucfirst( $this->input->post('location') ),
-            'description'   => ucfirst( $this->input->post('description') ),
-            'datestamp'     => $this->input->post('datestamp'),
-            'deductible'    => $this->input->post('deductible'),
+            'company'       => ucfirst( $this->input->post('company') ),
+            'dueDate'     => $this->input->post('dueDate'),
         );
         
-        echo $this->Expenses_model->add($data);
+        echo $this->Bills_model->add($data);
     }
     
     public function delete()
@@ -69,7 +65,7 @@ class Bills extends CI_Controller {
             'deletes' => $this->input->post('deletes'),
         );
         
-        echo $this->Expenses_model->delete($data);
+        echo $this->Bills_model->delete($data);
     }
     
     public function listing()
@@ -84,24 +80,24 @@ class Bills extends CI_Controller {
         $this->db->where('uuid', $this->session->gorillaUuid);
         //$this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
         $this->db->order_by('datestamp', 'desc');
-        $expenses = $this->db->get('expenses');
+        $bills = $this->db->get('bills');
 
         if ($expenses->num_rows() > 0 )
         {
             $total = 0;
-            foreach ($expenses->result() as $expense)
+            foreach (bills->result() as $bill)
             {
-                $total = $total + $expense->amount;
+                $total = $total + $bill->amount;
             }
 
             $grandTotal = $grandTotal + $total;
 
             $data = array(
                 'total' => number_format((float)$total, 2, '.', ''),
-                'expenses_listings' => $expenses->result_array()
+                'bills_listings' => $bills->result_array()
             );
 
-            $this->parser->parse('expenses/listing_parser', $data);
+            $this->parser->parse('bills/listing_parser', $data);
 
 
             $data = array(

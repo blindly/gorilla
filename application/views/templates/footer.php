@@ -28,7 +28,7 @@
         <script src="/static/external/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
 
         <!-- Custom Scripts -->
-        <?php $validScripts = array('expenses', 'mileage'); ?>
+        <?php $validScripts = array('expenses', 'mileage', 'bills', 'dashboard'); ?>
         <?php if ( in_array(strtolower( $controller ), $validScripts) ): ?>
             <script src="/static/js/<?= strtolower( $controller ) ?>.js"></script>
         <?php endif; ?>
