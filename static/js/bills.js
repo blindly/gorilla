@@ -36,10 +36,10 @@ $( document ).ready( function() {
             // Log a message to the console
             console.log("Hooray, it added!");
                         
-            $('#successbox').html('<p>Expense added successfully :)</p>');
+            $('#successbox').html('<p>Bill added successfully :)</p>');
             $('#successbox').css('display','block');
 
-            // Load List of Expenses
+            // Load List of Bills
             $.ajax({
                   url:"/bills/listing",
                   cache:0,
@@ -62,12 +62,12 @@ $( document ).ready( function() {
                 textStatus, errorThrown
             );
             
-            $('#failbox').html('<p>Error adding expenses :(</p>');
+            $('#failbox').html('<p>Error adding bills :(</p>');
             $('#failbox').css('display','block');
             
-            // Load List of Expenses
+            // Load List of Bills
             $.ajax({
-                  url:"/expenses/listing",
+                  url:"/bills/listing",
                   cache:0,
                   success:function(result){
                          document.getElementById("billsListing").innerHTML=result;
@@ -124,10 +124,10 @@ $( document ).ready( function() {
             // Log a message to the console
             console.log("Hooray, it deleted!");
                         
-            $('#successbox').html('<p>Expense removed successfully :)</p>');
+            $('#successbox').html('<p>Bill removed successfully :)</p>');
             $('#successbox').css('display','block');
             
-            // Load List of Expenses
+            // Load List of Bills
             $.ajax({
                   url:"/bills/listing",
                   cache:0,
@@ -149,7 +149,7 @@ $( document ).ready( function() {
                 textStatus, errorThrown
             );
             
-            $('#failbox').html('<p>Error removing expenses :(</p>');
+            $('#failbox').html('<p>Error removing bill :(</p>');
             $('#failbox').css('display','block');
             
             setTimeout(function(){ 
@@ -170,7 +170,7 @@ $( document ).ready( function() {
         
     });
     
-    // Refresh list of expenses
+    // Refresh list of bills
     $.ajax({
           url:"/bills/listing",
           cache:0,
