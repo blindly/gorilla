@@ -18,7 +18,7 @@
 
                 </div>
 
-                Text input
+                <!-- Text input -->
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="category">Category</label>  
                     <div class="col-md-6">
