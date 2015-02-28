@@ -79,7 +79,7 @@ class Bills extends CI_Controller {
         // Get All Mileage Expenses
         $this->db->where('uuid', $this->session->gorillaUuid);
         //$this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
-        $this->db->order_by('dueDate', 'desc');
+        $this->db->order_by('week', 'desc');
         $bills = $this->db->get('bills');
 
         if ($bills->num_rows() > 0 )
