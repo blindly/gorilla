@@ -52,7 +52,7 @@ class Bills extends CI_Controller {
             'uuid'          => $this->session->gorillaUuid,
             'amount'        => number_format( (float) $this->input->post('amount'), 2, '.', ',' ),
             'company'       => ucfirst( $this->input->post('company') ),
-            'dueDate'      => 1//$this->input->post('dueDate'),
+            'week'      => $this->input->post('week'),
         );
         
         echo $this->Bills_model->add($data);
@@ -88,10 +88,18 @@ class Bills extends CI_Controller {
             foreach ($bills->result() as $bill)
             {
                 $total = $total + $bill->amount;
+                
+                echo "<pre>";
+                print_r($total);
+                echo "</pre>";
             }
-
+            
             $grandTotal = $grandTotal + $total;
 
+            echo "<pre>";
+            print_r($grandTotal);
+            echo "</pre>";
+            
             $data = array(
                 'total' => number_format((float)$total, 2, '.', ''),
                 'bills_listings' => $bills->result_array()

@@ -30,15 +30,13 @@
 
         <!-- Select Basic -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="dueDate">Due Date</label>
+          <label class="col-md-4 control-label" for="dueDate">Week Due</label>
           <div class="col-md-6">
-            <select id="dueDate" name="dueDate" class="form-control">
+            <select id="week" name="week" class="form-control">
               <option value="1">1st</option>
-              <option value="5">5th</option>
-              <option value="10">10th</option>
-              <option value="15">15th</option>
-              <option value="20">20th</option>
-              <option value="25">25th</option>
+              <option value="2">2th</option>
+              <option value="3">3th</option>
+              <option value="4">4th</option>
             </select>
           </div>
         </div>
