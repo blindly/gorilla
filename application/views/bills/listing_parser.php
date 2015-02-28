@@ -37,13 +37,5 @@
                 <button id="removal" name="removal" class="btn btn-danger" type>Delete</button>
             </td>
         </tr>
-
-        <tr>
-            <td colspan="4" align="center">
-                <strong>
-                    Total: ${total}
-                </strong>
-            </td>
-        </tr>
     </table>
 </form>
