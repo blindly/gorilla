@@ -8,7 +8,7 @@
                 Company
             </th>
             <th>
-                Monthly Due Date
+                Week due
             </th>
             <th></th>
         </tr>
@@ -22,7 +22,7 @@
                         {company}
                     </td>
                     <td>
-                        {dueDate}
+                        {week}
                     </td>
 
                     <td>
