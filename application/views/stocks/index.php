@@ -46,13 +46,13 @@
             <!-- Default panel contents -->
             <div class="panel-heading">
                 <h3 class="text-center">
-                    Current Expenses
+                    Stocks Watchlist
                 </h3>
             </div>
             <div class="panel-body"></div>
             
             <form id="deleteForm" name="deleteForm">
-                <div id="stocklisting">
+                <div id="stockslisting">
                 </div>
             </form>
         </div>
