@@ -16,7 +16,7 @@ class Stocks extends CI_Controller {
         $this->load->database();
         
         // Load Models
-        $this->load->model('Bills_model');
+        $this->load->model('Stocks_model');
         $this->load->model('User_model');
     }
     
@@ -40,7 +40,7 @@ class Stocks extends CI_Controller {
         );
         
         $this->load->view('templates/header', $data);
-        $this->load->view('bills/index', $data);
+        $this->load->view('stocks/index', $data);
         $this->load->view('templates/footer', $data);
     }
     
@@ -93,7 +93,7 @@ class Stocks extends CI_Controller {
         {
             $data = array(
                 'gorillaUuid'   => $this->session->gorillaUuid,
-                'message'      => "No bills found. You should add some!",
+                'message'      => "No stocks found. You should add some!",
             );
 
             $this->load->view('templates/message', $data);
