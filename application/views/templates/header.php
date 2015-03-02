@@ -55,7 +55,7 @@
                         <li><a href="/expenses">Expenses</a></li>
                         <li><a href="/mileage">Mileage</a></li>
                         <li><a href="/bills">Bills</a></li>
-                        <li><a href="/stocks">Stocks</a></li>
+                        <!-- <li><a href="/stocks">Stocks</a></li> -->
                         <li><a href="/user/u/<?= $gorillaUuid ?>">Personal Link</a></li>
                     <?php else: ?>
                         <li><a href="/user/register">Register</a></li>

@@ -66,19 +66,22 @@ class Stocks extends CI_Controller {
         echo $this->Stocks_model->delete($data);
     }
     
+    public function cron()
+    {
+        $this->db->distinct();
+        $this->db->select('stock');
+        $stocks = $this->db->get('stocks');
+    }
+    
     public function listing()
     {
         $this->load->library('parser');
-        
-
-        // Initialize grand total for expenses
-        $grandTotal = 0;
 
         // Get All Mileage Expenses
         $this->db->where('uuid', $this->session->gorillaUuid);
         //$this->db->where('timestamp = DATE_SUB(NOW(), INTERVAL 1 MONTH)');
         //$this->db->order_by('week', 'asc');
-        $stocks = $this->db->get('stocks');
+        $stocks = $this->db->get('quotes');
 
         if ($stocks->num_rows() > 0 )
         {        
