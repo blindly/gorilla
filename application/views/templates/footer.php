@@ -9,6 +9,7 @@
                                 <li><a href="/expenses">Expenses</a></li>
                                 <li><a href="/mileage">Mileage</a></li>
                                 <li><a href="/bills">Bills</a></li>
+                                <li><a href="/stocks">Stocks</a></li>
                                 <li><a href="/user/u/<?= $gorillaUuid ?>">Personal Link</a></li>
                             <?php else: ?>
                                 <li><a href="/user/register">Register</a></li>
@@ -29,7 +30,7 @@
         <script src="/static/external/bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
 
         <!-- Custom Scripts -->
-        <?php $validScripts = array('expenses', 'mileage', 'bills', 'dashboard'); ?>
+        <?php $validScripts = array('expenses', 'mileage', 'bills', 'dashboard', 'stocks'); ?>
         <?php if ( in_array(strtolower( $controller ), $validScripts) ): ?>
             <script src="/static/js/<?= strtolower( $controller ) ?>.js"></script>
         <?php endif; ?>
